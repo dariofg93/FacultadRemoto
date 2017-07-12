@@ -1,0 +1,5 @@
+procedure EntenderEnTresMinutosBis()
+{
+//El procedimiento, al igual que en el ejercicio 9, dibuja 3 cuadrados uno   encima del otro dejando un espacio en blanco por cada uno y tambien deja el  cabezal al Norte del extremo noroeste del ultimo cuadrado.
+//La diferencia es que éste programa está escrito de una forma mucho mas     sencilla al estar escrito en programas definidos por el usuario. Al finalizar se ejecuta el programa EntenderEnTresMinutosBis() y el cabezal deja los 3    cuadrados en el tablero.
+}

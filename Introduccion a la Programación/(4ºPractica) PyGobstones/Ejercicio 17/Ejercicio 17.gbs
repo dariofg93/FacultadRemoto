@@ -1,0 +1,12 @@
+procedure IrAlExtremo(d)
+{
+ while(puedeMover(d))
+ {
+  Mover(d)
+ }
+}
+
+procedure Main()
+{
+ IrAlExtremo(Oeste)
+}

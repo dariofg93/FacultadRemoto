@@ -1,0 +1,20 @@
+function unaBolitaCAl(d,c)
+{
+ if(puedeMover(d))
+ { Mover(d) }
+ return(hayBolitas(c))
+}
+
+procedure IrHastaColor(d,c)
+{
+ while(puedeMover(d)&&not unaBolitaCAl(d,c))
+ {
+  Mover(d)
+ }
+ Mover(d)
+}
+
+procedure Main()
+{
+ IrHastaColor(Norte,Verde)
+}

@@ -1,0 +1,24 @@
+1.//Pepe(Azul, Este, 5)
+2.//Poner(Poner)
+3.//Poner(Mover(Este), Azul)
+4.//Poner(Poner(Azul))
+5.//Pepe(Poner(Azul), Mover(Este), 4)
+6.//Pepe(Azul, Este, 5 == 7)
+7.//Pepe(minColor(), minDir(), 7 div 5)
+8.//Pepe(siguiente(siguiente(minColor())), Este, nroBolitas(Azul))
+
+/* Las invocaciones 1, 7 y 8 son las unicas funcionales para el procedimiento Pepe(c,d,n).
+
+procedure Pepe(c,d,n)
+{
+ repeatWith i in 1..n
+ {
+  Poner(c)
+  Mover(d)
+ }                                  
+}
+
+procedure Main()
+{
+ Pepe(c,d,n)
+}

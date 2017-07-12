@@ -1,0 +1,39 @@
+1)
+procedure CantidadDeBolitas(c)
+{ (nroBolitas(c)) }
+
+2)
+procedure DobleCantidadDeBolitasRojas()
+{ (nroBolitas(Rojo))*2 }
+
+3)
+procedure TrueSiHayMasDeCincoBolitas(c)
+{ (nroBolitas(c))>5 }
+
+4)
+procedure TrueSiHayAlMenosCincoBolitas(c)
+{ (nroBolitas(c))>=5 }
+
+5)
+procedure TrueSiHayAlMenosCincoBolitasYEstoyAlBordeDelLadoEsteDelTablero(c)
+{ (nroBolitas(c))>=5 && not (puedeMover(Este)) }
+
+6)
+procedure TrueSiMePuedoMoverAlNorteOAlEste()
+{ (puedeMover(Este)) || (puedeMover(Norte)) }
+
+7)
+procedure TrueSiHayBolitasDeTodosLosColores()
+{ (nroBolitas(minColor()..maxColor()))>=1 }
+
+8)
+procedure TrueSiFaltanBolitasDeAlMenosUnColor()
+{ (nroBolitas(Azul))>=0 && (nroBolitas(Negro))>=0 &&
+  (nroBolitas(Rojo))>=0 && (nroBolitas(Verde))>=0 }
+
+9)
+procedure TrueSiHayUnaCeldaAlEsteConBolitasNegrasORojas(n)
+{ 
+ repeatWith i in 1..n
+ { (puedeMover(Este) && (nroBolitas(Negro))>0 || (nroBolitas(Negro))>0 }
+}

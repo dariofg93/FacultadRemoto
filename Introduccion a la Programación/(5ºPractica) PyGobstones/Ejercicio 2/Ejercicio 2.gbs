@@ -1,0 +1,31 @@
+procedure MoverNSiPuede(n,d)
+{
+ repeatWith i in 1..n
+ {
+  MoverSiPuede(d)
+ }
+}
+
+procedure PonerSalteado(n,c,d)
+{
+ repeatWith i in 1..n
+ {
+  if(puedeMover(d))
+  {
+   Poner(c)
+   MoverNSiPuede(n*i,d)
+  }
+ }
+}
+
+procedure MoverSiPuede(d)
+{
+ if(puedeMover(d))
+ { Mover(d) }
+}
+
+procedure Main()
+{
+ PonerSalteado(3,Verde,Este)
+}
+

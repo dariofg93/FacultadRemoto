@@ -1,0 +1,7 @@
+"datos de una relacion" y "datos de otra" Casi 100% seguro que la resolucion implica interseccion
+
+"datos de una relacion" o "datos de otra" Casi 100% seguro que la resolucion implica union
+
+"datos de una relacion" que esten en todos los de "datos de otra" 100% seguro que la resolucion implica division
+
+"datos de una relacion" que esten solo en "datos de otra" 100% seguro que la resolucion implica resta

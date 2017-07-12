@@ -1,0 +1,14 @@
+procedure PintarConColorHacia(c, d)
+{
+ Poner(c)
+ while(puedeMover(d))
+ {
+  Mover(d)
+  Poner(c)
+ }
+}
+
+procedure Main()
+{
+ PintarConColorHacia(Negro,Oeste)
+}

@@ -1,0 +1,107 @@
+function vacia()
+--Proposito: Determina si la celda actual no tiene bolitas de ningun color.
+{
+ return(nroBolitas(Azul)==0&&nroBolitas(Negro)==0
+        &&nroBolitas(Rojo)==0&&nroBolitas(Verde)==0)
+}
+
+function conBolitas()
+--Proposito: Determina si la celda actual tiene bolitas (no importa el color)
+{
+ return(nroBolitas(Azul)>0||nroBolitas(Negro)>0
+        ||nroBolitas(Rojo)>0||nroBolitas(Verde)>0)
+}
+
+function conBolitasAl(d)
+--Proposito: Determina si la celda en direccion d tiene bolitas (no importa  el color) 
+--Precondicion: Esta funcion hace BOOM si el cabezal no se puede mover en    direccion d.
+{
+ Mover(d)
+ return(conBolitas())
+}
+
+function lindanteConBolitas(d)
+--Proposito: Determina si hay una celda en direccion d que tenga bolitas (no importa el color).
+--Observacion: Notar que esta funcion es total y denota False cuando no se   puede mover en direccion d.
+{
+ return(puedeMover(d)&&conBolitasAl(d))
+}
+
+function enCruz()
+--Proposito: Determina si la celda actual tiene forma de cruz, i.e.,         determina si la celda actual tiene bolitas y a la vez en todas los lados hay celdas lindantes con bolitas (no importa el color).
+{
+ return(conBolitas()&&
+        lindanteConBolitas(Norte)&&
+        lindanteConBolitas(Este)&&
+        lindanteConBolitas(Sur)&&
+        lindanteConBolitas(Oeste))
+}
+
+function enCruzAl(d)
+--Proposito: Determina si la celda en direccion d tiene forma de cruz
+--Observacion: Esta  funcion hace BOOM si el cabezal no se puede mover en    direccion d.
+{
+ Mover(d)
+ return(enCruz())
+}
+
+function enCruzDiag(d)
+--Proposito: Determina si la celda en la diagonal d + siguiente(d) tiene for-ma de cruz.
+--Observacion: Esta funcion hace BOOM si el cabezal no se puede mover en  di-reccion d o en direccion siguiente(d).
+{
+ Mover(d)
+ Mover(siguiente(d))
+ return(enCruz())
+}
+
+function lindanteEnCruz(d)
+--Proposito: Indica si hay una celda en direccion d que tenga forma de cruz.
+--Observacion: Esta funcion es total y denota False cuando no se puede mover en direccion d.
+{
+ return(puedeMover(d)&&enCruz())
+}
+
+function diagonalEnCruz(d)
+--Proposito: Indica si hay una celda en diagonal d + siguiente(d) que tenga  forma de cruz.
+--Oabservacion: Esta funcion es total y denota False cuando no se puede mover en direccion d o en direccion siguiente(d).
+{
+ return(puedeMover(d)&&puedeMover(siguiente(d))&&enCruzDiag(d))
+}
+
+function cruzDiag()
+{
+ hayBolitasDeColores:=enCruz()
+ repeatWith d in minDir()..maxDir()
+ {
+  Mover(d)
+  Mover(siguiente(d))
+  hayBolitasDeColores:=enCruz()
+  Mover(previo(d))
+  Mover(opuesto(d))
+ }
+ return(hayBolitasDeColores)
+}
+
+function cruz()
+{
+ hayBolitasDeColores:=enCruz()
+ repeatWith d in minDir()..maxDir()
+ {
+  Mover(d)
+  hayBolitasDeColores:=enCruz()
+  Mover(-d)
+ }
+ return(hayBolitasDeColores)
+}
+
+function explosion()
+--Proposito: Indica si en TODAS las direcciones N, NE, E, SE, S, SO, O, NO,  hay celdas con forma de cruz.
+{
+ return(cruz()&&cruzDiag())
+}
+
+procedure Main()
+{
+ if(explosion())
+ { Poner(Verde) }
+}

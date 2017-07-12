@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1445949408 source:/home/alumno/Escritorio/Soluciones/cpp y h(C,C++)/ListNumeros/main.cpp
+	<iostream>
+	"List.h"
+
+1445946118 /home/alumno/Escritorio/Soluciones/cpp y h(C,C++)/ListNumeros/List.h
+	<iostream>
+
+1445949248 source:/home/alumno/Escritorio/Soluciones/cpp y h(C,C++)/ListNumeros/LIst.cpp
+	<iostream>
+	"List.h"
+

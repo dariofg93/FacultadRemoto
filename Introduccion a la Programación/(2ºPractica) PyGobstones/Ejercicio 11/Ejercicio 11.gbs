@@ -1,0 +1,12 @@
+//¿Cual le resulta mas entendible?
+//El programa del ejercicio 10(EntenderEnTresMinutosBis) es mas facil de     interpretar que el programa del ejercicio 9(EntenderEnTresMinutos) ya que,   esta escrito en subtareas.
+//¿Que habria que modicar en ambos programas para que los cuadrados sean    rojos?
+//En el ejercicio 9, habria que modificar cada bolita Azul con una de color  Rojo.
+//En el ejercicio 10, habria que modificar las bolitas de solo un programa:
+procedure PonerLineaAzul3() {
+//Pone una linea azul de longitud 3 hacia el este,
+//dejando el cabezal en la celda actual
+Poner(Azul); Mover(Este);  <-------Cambiar por una bolita Roja.
+Poner(Azul); Mover(Este);  <-------Cambiar por una bolita Roja.
+Poner(Azul); Mover(Oeste); Mover(Oeste);<-------Cambiar por una bolita Roja.
+}

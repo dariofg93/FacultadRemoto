@@ -1,0 +1,43 @@
+CLASE DE OBJETOS 3: 30-09-16
+
+- Se ve la idea de Option en escala
+	Option tiene dos valores...
+
+			  Option
+				^
+			----!------
+			!		  !
+		  Some		None
+
+El None es un objeto(Singleton). El Some se contruye con aply... dandole un parametro
+
+- Option; Operaciones...
+	* get() =  Da el objeto que tiene el Some... Explota si es None
+	* getOrElse(()=> println("Mala Suerte")...BLOQUE...) = Similar al get, pero al haber un None devuelve el bloque que se le asigna por parametro
+	* O usar pattern matching
+
+- Operaciones buenas...
+	* Operaciones con nombre parecidos al de las colecciones (map, filter, collect, flatMap, foreach, etc).
+	* flatMap(Option[T])... es un map normal, pero aplanando Options...
+
+
+-Pattern Mation: Formas de usarlo...
+
+-Por Tipo...
+
+-Por Listas...
+	def toUpperCase(string:List[String]) : String = {
+	  string match {
+	    case Nil => ""
+		case List(unico) => blablabla...
+		case cabeza :: cola => ... blablabla ... toUperCase(cola)		-- Usando operador ::
+	  }
+	}
+
+-Por Objeto, Singleton Nil
+
+-En Pattern Matching: Para tener todo el objeto completo, con una condicion... p @ Persona
+
+Extractores: apply, unapply (retorna un Some), con Object..
+
+Constructores: Definen solo apply y aunapply, con case... Tambien determina que sean finally

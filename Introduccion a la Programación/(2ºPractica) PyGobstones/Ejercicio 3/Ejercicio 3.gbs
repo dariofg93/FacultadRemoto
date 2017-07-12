@@ -1,0 +1,23 @@
+procedure Main() {
+/*Propósito:Saca 1 bolita Azul y 1 Verde, y pone 1 Roja en la celda actual.
+El cabezal nunca se movio del lugar*/
+Sacar(Azul)
+Sacar(Verde)
+Poner(Rojo)
+}
+
+procedure Main() {
+/*Propósito:Mueve el cabezal 2 celdas al Este y lo deja ahí.
+Luego pone una bolita Negra en la nueva celda*/
+Mover(Este)
+Mover(Este)
+Poner(Negro)
+}
+
+procedure Main() {
+/*Propósito:Pone una bolita Roja, despues saca una Azul y una Verde 
+en la celda actual. El cabezal nunca se movió del lugar*/
+Poner(Rojo)
+Sacar(Azul)
+Sacar(Verde)
+}

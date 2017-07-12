@@ -1,0 +1,69 @@
+require_relative '../src/chamuyo'		//chamuyo es un archivo creado
+
+class Punto include Chamuyo
+
+	attr_accerssor :x,:y
+
+	def saludar
+		puts("Hola mundo")
+	end
+	
+	def initialize(x,y)
+		@x = x
+		@y = y
+	end
+
+	def coordenada_mas_grande
+		max(@x,@y)	//O sino...
+		if @x < @y
+			@y
+		else
+			@x
+		end
+	end
+
+	def es_el_origen?
+		@x == 0 and @y == 0
+	end
+	
+	private  //Desde el private hasta donde termine la clase sus metodos son private
+
+	def contame_de_vos
+		"Hola, soy un punto en #{@x},#{@y}"
+	end
+
+	def Punto.cosas		//mensaje estatico
+		@cosas
+	end
+
+	@@todos_los_creados = []	//variable staticas en toda la jerarquia
+end
+
+class PuntoColorido < Punto
+	def initialize(x,y,color)
+		@color = color
+		super(x,y)
+	end
+
+	def contame_de_vos
+		super + " y de color #{@color}"
+	end
+end
+
+module Chamuyo
+	def chamuyar
+		puts("Hola que tal?")
+	end
+end
+
+*********************************************************************************************
+
+					En codificacion Ruby no es tipado...
+					Pero Ruby es tipado en momento de ejecucion
+							^
+							|
+						Ruby es Dinamico
+
+*********************************************************************************************
+
+METAPROGRAMACION: Un programa que trabaja sobre programas

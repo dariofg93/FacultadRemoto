@@ -1,0 +1,126 @@
+function numeroDeMaquina(t)
+//Proposito: Devuelve el numero de la maquina de la celda actual.
+{
+		return(nroBolitas(t,Negro))
+}
+
+function numeroDeError(t)
+//Proposito: Devuelve el numero del error de la maquina de la celda actual.
+{
+		return(nroBolitas(t,Rojo))
+}
+
+function hayMaquina(t)
+//Proposito: Devuelve True Si hay una maquina en la celda actual
+{
+		return(hayBolitas(t,Negro))
+}
+
+function hayMaquinaConErrores(t)
+//Proposito: Devuelve True Si hay una maquina con errores en la celda actual
+{
+		return(hayBolitas(t,Negro) && hayBolitas(t,Rojo))
+}
+
+function agregarSiHayMaquinaConErrores(t)
+//Proposito: Devuelve el numero de la maquina si tiene errores en forma de lista.
+{
+		ls:=[]
+		if(hayMaquinaConErrores(t))
+			{
+				ls:=[numeroDeMaquina(t)]
+			}
+		return(ls)
+}
+
+function agregarNumeroDeErrores(t)
+//Proposito: Devuelve el numero del error si tiene errores en forma de lista.
+{
+		ls:=[]
+		if(hayMaquinaConErrores(t))
+			{
+				ls:=[numeroDeError(t)]
+			}
+		return(ls)
+}
+
+function agregarSiSeRetiran(t)
+//Proposito: Devuelve el numero del error si tiene errores en forma de lista.
+{
+		ls:=[]
+		if(hayMaquinaConErrores(t) && numeroDeError(t)>15)
+			{
+				ls:=[numeroDeMaquina(t)]
+			}
+		return(ls)
+}
+
+function maquinasConErrores(t)
+//Proposito: Devuelve una lista con el numero de las maquinas que produjeron un error.
+{
+		ls:=[]
+		tAux:=t
+		tAux.IrAlInicioT(Norte,Este)
+		while(puedeMoverT(tAux,Norte,Este))
+		{
+			ls:=ls++agregarSiHayMaquinaConErrores(tAux)
+			tAux.MoverT(Norte,Este)
+		}
+		return(ls++agregarSiHayMaquinaConErrores(tAux))
+}
+
+function cantErroresPorMaquina(t)
+//Proposito: Devuelve una lista con el numero de los errores de todas las maquinas.
+{
+		ls:=[]
+		tAux:=t
+		tAux.IrAlInicioT(Norte,Este)
+		while(puedeMoverT(tAux,Norte,Este))
+		{
+			ls:=ls++agregarNumeroDeErrores(tAux)
+			tAux.MoverT(Norte,Este)
+		}
+		return(ls++agregarNumeroDeErrores(tAux))
+}
+
+function maquinasMayorA15Errores(t)
+//Proposito: Devuelve una lista con el numero de las maquinas que superan los quinces errores.
+{
+		ls:=[]
+		tAux:=t
+		tAux.IrAlInicioT(Norte,Este)
+		while(puedeMoverT(tAux,Norte,Este))
+		{
+			ls:=ls++agregarSiSeRetiran(tAux)
+			tAux.MoverT(Norte,Este)
+		}
+		return(ls++agregarSiSeRetiran(tAux))
+}
+
+function totalErrores(ls)
+//Proposito: Suma todos los errores de las maquinas de la oficina.
+{
+		res:=0
+		foreach n in ls
+		{
+			res:=res+n
+		}
+		return(res)
+}
+
+function dineroPerdidoPorMaquina(ls)
+//Proposito: Devuelve una lista con la cantidad de dinero que se perdio por maquina.
+{
+		res:=[]
+		foreach n in ls
+		{
+			res:=res++[n*100]
+		}
+		return(res)
+}
+
+t.program
+{
+		v:=maquinasConErrores(t)
+		return(v)
+}

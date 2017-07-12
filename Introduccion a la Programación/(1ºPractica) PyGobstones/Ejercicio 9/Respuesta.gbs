@@ -1,0 +1,7 @@
+ No es posible ejecutar el programa en los tableros 2, 3, 4, 5, 7 y 9 
+porque en algun momento del recorrido el cabezal se sale del tablero: BOOM!
+
+¿Que ocurre si el tablero ya tenia bolitas verdes? 
+¿Es esto un problema, o el efecto obtenido es el esperado?
+ Si hay alguna bolita verde el efecto no es el esperado, ya que, al 
+finalizar no habra un cuadrado verde perfecto sobre el tablero de una sola bolita por celda.

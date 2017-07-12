@@ -1,0 +1,17 @@
+procedure UnaBolitaDeCadaColor(){
+//Propósito:Poner una bolita de cada uno de los 4 colores en la celda actual.
+ Poner(Rojo)
+ Poner(Verde)
+ Poner(Azul)
+ Poner(Negro)
+}
+
+procedure PonerBolitaDeColor(c) {
+//El parámetro "c" es el color de una bolita.
+//Propósito:Pone una bolita de un color.
+ Poner(c)
+}
+
+//Es mejor usar en el procedure Main la primera opción, ya que, si se usa la 
+//segunda tendrian que ejecutarse 4 programas(uno por cada color) y en el 
+//primero solo 1.

@@ -1,0 +1,14 @@
+procedure LineaAzulDe2() {
+//Proposito:Realiza una linea de 2 celdas hacia el Este con bolitas Azules, el cabezal se mueve una celda al Este.
+//Preposicion:Debe haber al menos una celda al Este de la celda actual.
+Poner(Azul); Mover(Este); Poner(Azul)
+}
+
+procedure PonerEscaleraAzul4() {
+//Proposito:Da forma a una escalera de 4 pisoshacia el noreste de la celda  actual.
+//Precondicion:Deben haber almenos 4 celdas al Este, desde la celda actual y 3 celdas al Norte desde la celda actual.
+ LineaAzulDe2(); Mover(Norte)
+ LineaAzulDe2(); Mover(Norte)
+ LineaAzulDe2(); Mover(Norte)
+ LineaAzulDe2()
+}

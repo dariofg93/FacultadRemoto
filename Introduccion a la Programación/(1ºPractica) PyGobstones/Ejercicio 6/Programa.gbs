@@ -1,0 +1,5 @@
+procedure Main()
+{
+ Mover(Norte)
+ Poner(Azul)
+}

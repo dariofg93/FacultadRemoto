@@ -1,0 +1,14 @@
+procedure PonerN(n,c)
+//Proposito: Pone tantas bolitas de color(c) tantas veces como (n) lo indique
+//Precondicion: No tiene.
+{
+ repeatWith i in 1..n
+ {
+  Poner(c)
+ }
+}
+
+procedure Main()
+{
+ PonerN(500,Verde)
+}

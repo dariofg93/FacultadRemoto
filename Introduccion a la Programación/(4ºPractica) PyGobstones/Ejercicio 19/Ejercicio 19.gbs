@@ -1,0 +1,28 @@
+procedure PintarConColorHacia(c)
+{
+ Poner(c)
+ while(puedeMover(Este))
+ {
+  Mover(Este)
+  Poner(c)
+ }
+}
+
+procedure IrAlExtremo()
+{
+ while(puedeMover(Oeste))
+ {
+  Mover(Oeste)
+ }
+}
+
+procedure PintarFila(c)
+{
+ IrAlExtremo()
+ PintarConColorHacia(c)
+}
+
+procedure Main()
+{
+ PintarFila(Azul)
+}

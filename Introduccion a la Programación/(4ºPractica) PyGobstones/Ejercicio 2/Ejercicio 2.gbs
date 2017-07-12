@@ -1,0 +1,14 @@
+--El siguiente programa pone 1 bolita roja en la celda actual.
+-- :)
+
+function sinEfectoMariposa() 
+{
+ Poner(Azul); Poner(Azul);
+ Poner(Azul); Poner(Verde)
+ return(Rojo)
+}
+
+procedure Main()
+{
+ Poner(sinEfectoMariposa())
+}

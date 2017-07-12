@@ -1,0 +1,16 @@
+procedure PonerVerdeAlNorteConRojas()
+{
+ while(puedeMover(Norte))
+ {
+  Mover(Norte)
+  if(hayBolitas(Rojo))
+  {
+   Poner(Verde)
+  }
+ }
+}
+
+procedure Main()
+{
+ PonerVerdeAlNorteConRojas()
+}

@@ -1,0 +1,12 @@
+elementos de capa 2:
+
+Switch, Mac address
+
+Usamos vlan en funcion de los puertos:
+
+vl1= puertos del 1-12
+vl2= puertos del 3-24
+
+Eso en cada switch..
+
+Protocolo 802.1q.. trunk

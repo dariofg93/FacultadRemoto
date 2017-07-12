@@ -1,0 +1,69 @@
+--NO FUNCIONA
+
+procedure PonerN(n,c)
+{
+ repeatWith i in 1..n
+ { Poner(c) }
+}
+
+procedure IrAlInicioT(d1,d2)
+{
+ IrAlExtremo(-d1)
+ IrAlExtremo(-d2)
+}
+
+procedure IrAlExtremo(d)
+{
+ while(puedeMover(d))
+ {
+  Mover(d)
+ }
+}
+
+function puedeMoverT(d1,d2)
+{
+ return(not puedeMover(d1)&&not puedeMover(d2))
+}
+
+procedure MoverT(d1,d2)
+{
+ if(puedeMover(d1))
+ {
+  PonerDobleBolitas()
+  Mover(d1)
+ }
+ else
+ {
+  Mover(d2)
+  IrAlExtremo(-d1)
+ }
+ PonerDobleBolitas()
+}
+
+
+
+procedure PonerDobleBolitas()
+{
+ repeatWith c in minColor()..maxColor()
+ {
+  if(hayBolitas(c))
+  {
+   PonerN(nroBolitas(c)*2,c)
+  }
+ }
+}
+
+procedure RecorridoEstandar(d1,d2)
+{
+ IrAlInicioT(d1,d2)
+ while(not puedeMoverT(d1,d2))
+ {
+  MoverT(d1,d2)
+ }
+}
+
+procedure Main()
+{
+ RecorridoEstandar(Sur,Oeste)
+}
+

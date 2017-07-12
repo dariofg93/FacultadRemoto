@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1447288392 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_8(Iterator)/Iterator.cpp
+	<stdlib.h>
+	"Iterator.h"
+
+1447288381 /media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_8(Iterator)/Iterator.h
+	"List.h"
+
+1447288400 /media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_8(Iterator)/List.h
+
+1447288409 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_8(Iterator)/List.cpp
+	<stdlib.h>
+	<iostream>
+	"List.h"
+
+1447288971 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_8(Iterator)/main.cpp
+	<iostream>
+	"List.h"
+	"Iterator.h"
+

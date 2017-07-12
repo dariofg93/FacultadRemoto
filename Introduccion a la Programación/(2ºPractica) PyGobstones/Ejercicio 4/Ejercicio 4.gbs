@@ -1,0 +1,13 @@
+procedure PonerVerdeSacarVerde() {
+//Propósito:Pone una bolita verde y luego la saca, todo en la celda actual.
+ Poner(Verde)
+ Sacar(Verde)
+}
+
+procedure Main()
+{
+ PonerVerdeSacarVerde()
+}
+
+/*El programa no tendrá ningún efecto, ya que, el tablero no se ve modificado
+ en cuanto se ejecuta*/

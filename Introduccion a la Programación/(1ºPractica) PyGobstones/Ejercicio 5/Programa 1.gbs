@@ -1,0 +1,7 @@
+procedure Main()
+{
+ Poner(Azul)
+ Sacar(Azul)
+}
+
+

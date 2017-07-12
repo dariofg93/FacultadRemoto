@@ -1,0 +1,5 @@
+procedure Main()
+{
+ Sacar(Rojo)
+ Poner(Verde)
+}

@@ -1,0 +1,27 @@
+procedure LineaDeCuatroAzules()
+{
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Oeste)
+ Mover(Oeste)
+ Mover(Oeste)
+}
+
+procedure Main()
+{
+ IrAlOrigen()
+ LineaDeCuatroAzules()
+ Mover(Norte)
+ LineaDeCuatroAzules()
+ Mover(Norte)
+ LineaDeCuatroAzules()
+ Mover(Norte)
+ LineaDeCuatroAzules()
+}
+
+

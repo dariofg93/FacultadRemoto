@@ -1,0 +1,20 @@
+function unaBolitaCAl(d,c)
+{
+ if(puedeMover(d))
+ { Mover(d) }
+ return(hayBolitas(c))
+}
+
+procedure PonerVerdesAlNorte()
+{
+ while(puedeMover(Norte))
+ {
+  Mover(Norte)
+  Poner(Verde)
+ }
+}
+
+procedure Main()
+{
+ PonerVerdesAlNorte()
+}

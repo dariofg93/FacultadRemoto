@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1465572732 source:/home/alumno/Escritorio/BinaryTree/main.cpp
+	<iostream>
+	"Tree.h"
+	"Stack.h"
+
+1465574861 /home/alumno/Escritorio/BinaryTree/Tree.h
+	<iostream>
+
+1465574850 source:/home/alumno/Escritorio/BinaryTree/Tree.cpp
+	"Tree.h"
+
+1465572568 /home/alumno/Escritorio/BinaryTree/Stack.h
+	<iostream>
+	"Tree.h"
+
+1465572741 source:/home/alumno/Escritorio/BinaryTree/Stack.cpp
+	<iostream>
+	"Stack.h"
+
+1465576769 source:/home/alumno/Escritorio/BinaryTree/ArrayList.cpp
+	"ArrayList.h"
+
+1465576707 /home/alumno/Escritorio/BinaryTree/ArrayList.h
+	<iostream>
+

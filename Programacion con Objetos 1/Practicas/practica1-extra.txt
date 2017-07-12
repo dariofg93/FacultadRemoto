@@ -1,0 +1,15 @@
+Práctica 1 - Ejercicios extra con colecciones
+=============================================
+
+1) Realizar los agregados que sean necesarios al ejercicio 4 (mudanzas) para que se pueda llevar registro de todas las cosas que se fueron subiendo al camión. Hacer que el camión entienda los siguientes mensajes:
+  * cargar: unObjeto
+  * cantidadDeObjetosCargados
+  * descargar: unObjeto
+  * mover: unObjeto a: otroCamion (crear otro camión similar al camión original para probar este mensaje)
+
+2) Modificar el ejercicio de los celulares para que se guarden los montos de cada llamada que realizó cada persona. Usar una colección ordenada (ordered).
+
+3) Modificar el ejercicio 1 (pepita) para que pepita tenga una colección con los lugares que quiere visitar (que se los indicamos nosotros). Cuando vuela a un lugar, registrar que visitó ese lugar (es decir, ya no debería estar más en los lugares que quiere visitar). Hacer que entienda los siguientes mensajes:
+  * lugaresQueQuiereVisitar: unaColeccionDeLugares
+  * leFaltaVisitar: unLugar (devuelve true o false)
+  * visitoTodosLosLugaresDeseados (devuelve true o false)

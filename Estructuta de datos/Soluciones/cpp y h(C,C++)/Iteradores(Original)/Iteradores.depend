@@ -1,0 +1,81 @@
+# depslib dependency file v1.0
+1446743273 source:c:\users\claudia\desktop\iteradores\main.cpp
+	<iostream>
+	"List.h"
+	"Iterator.h"
+
+1446742874 h"
+
+1446743321 source:c:\users\claudia\desktop\iteradores\list.cpp
+	<stdlib.h>
+	<iostream>
+	"List.h"
+
+1446742791 
+
+1446742944 c:\users\claudia\desktop\iteradores\list.h
+
+1446742791 c:\users\claudia\desktop\iteradores\iterator.h
+	"List.h"
+
+1446742874 source:c:\users\claudia\desktop\iteradores\iterator.cpp
+	<stdlib.h>
+	"Iterator.h"
+
+1446742876 source:/home/dariofg/Escritorio/Iteradores/Iterator.cpp
+	<stdlib.h>
+	"Iterator.h"
+
+1446937337 /home/dariofg/Escritorio/Iteradores/Iterator.h
+	"List.h"
+
+1446811746 /home/dariofg/Escritorio/Iteradores/List.h
+
+1446743322 source:/home/dariofg/Escritorio/Iteradores/List.cpp
+	<stdlib.h>
+	<iostream>
+	"List.h"
+
+1446743642 source:/home/dariofg/Escritorio/Iteradores/main.cpp
+	<iostream>
+	"List.h"
+	"Iterator.h"
+
+1446742876 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Iteradores/Iterator.cpp
+	<stdlib.h>
+	"Iterator.h"
+
+1446937336 /media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Iteradores/Iterator.h
+	"List.h"
+
+1446811746 /media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Iteradores/List.h
+
+1446743322 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Iteradores/List.cpp
+	<stdlib.h>
+	<iostream>
+	"List.h"
+
+1446743642 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Iteradores/main.cpp
+	<iostream>
+	"List.h"
+	"Iterator.h"
+
+1446742876 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Iteradores(Original)/Iterator.cpp
+	<stdlib.h>
+	"Iterator.h"
+
+1446937336 /media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Iteradores(Original)/Iterator.h
+	"List.h"
+
+1446811746 /media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Iteradores(Original)/List.h
+
+1446743322 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Iteradores(Original)/List.cpp
+	<stdlib.h>
+	<iostream>
+	"List.h"
+
+1446743642 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Iteradores(Original)/main.cpp
+	<iostream>
+	"List.h"
+	"Iterator.h"
+

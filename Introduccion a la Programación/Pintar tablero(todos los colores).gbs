@@ -1,0 +1,47 @@
+procedure PintarTablero(color)
+{
+ Inicializar()
+ while (not (esFinDelRecorrido()))
+ {
+  ProcesarElemento(color);
+  PasarAlSiguienteElemento()
+ }
+ ProcesarElemento(color)
+}
+
+procedure Inicializar()
+{
+ IrAlOrigen()
+}
+
+procedure ProcesarElemento(color)
+{
+ Poner(color)
+}
+
+procedure PasarAlSiguienteElemento()
+{
+ if(puedeMover(Norte))
+ { Mover(Norte) }
+ else
+ { Mover(Este); IrAlExtremo(Sur) }
+}
+
+procedure IrAlExtremo(dir)
+{
+ while(puedeMover(dir))
+ { Mover(dir) }
+}
+
+function esFinDelRecorrido()
+{
+ return(not(puedeMover(Norte))&&(not(puedeMover(Este))))
+}
+
+procedure Main()
+{
+ repeatWith c in minColor()..maxColor()
+ {
+  PintarTablero(c)
+ }
+}

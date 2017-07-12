@@ -1,0 +1,23 @@
+procedure Main()
+{
+ Mover(Oeste)
+ Poner(Verde)
+ Mover(Norte)
+ Poner(Verde)
+ Mover(Este)
+ Poner(Verde)
+ Mover(Este)
+ Poner(Verde)
+ Mover(Sur)
+ Poner(Verde)
+ Mover(Sur)
+ Poner(Verde)
+ Mover(Oeste)
+ Poner(Verde)
+ Mover(Oeste)
+ Poner(Verde)
+ Mover(Norte)
+ Mover(Este)
+ Poner(Verde)
+}
+ 

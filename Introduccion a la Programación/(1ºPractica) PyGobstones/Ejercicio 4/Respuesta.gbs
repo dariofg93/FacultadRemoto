@@ -1,0 +1,4 @@
+ En el primer programa no se nota ninguna diferencia en cuanto se ejecuta
+ En el segundo programa, cuando se ejecuta, el cabezal y todo el tablero se
+autodrestruyen porque no se puede sacar una bolita azul, ya que, aún no hay
+ninguna en los tableros 1, 2, 4, 5, 6, 7 y 8.

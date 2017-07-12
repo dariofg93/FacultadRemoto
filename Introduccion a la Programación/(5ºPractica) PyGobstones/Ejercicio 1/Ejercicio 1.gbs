@@ -1,0 +1,28 @@
+procedure IrAlExtremo(d)
+--Proposito: Mueve el cabezal al extremo del tablero que indique "d".
+--Precondicion: El parametro "d" es una direccion.
+{
+ while(puedeMover(d))
+ {
+  Mover(d)
+ }
+}
+
+procedure MoverNRotativo(n,d)
+--Proposito: Mientras pueda, moverá el cabezal hacia la direccion "d".
+--           Si no puede, moverá en direccion "-d". Siempre hacia el extremo.
+--Precondicion: El parametro "d" es una direccion.
+{
+ repeatWith i in 1..n
+ {
+  if(puedeMover(d))
+  { IrAlExtremo(d) }
+  else
+  { IrAlExtremo(-d) }
+ }
+}
+
+procedure Main()
+{
+ MoverNRotativo(5,Norte)
+}

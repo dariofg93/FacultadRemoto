@@ -1,0 +1,15 @@
+function hayBolitasEnFila(c)
+{
+ IrAlExtremo(Oeste)
+ while(puedeMover(Este))
+ { Mover(Este) }
+ return(nroBolitas(c)>0)
+}
+
+procedure IrAlExtremo()
+{
+ while(puedeMover(Oeste))
+ {
+  Mover(Oeste)
+ }
+}

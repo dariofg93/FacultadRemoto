@@ -1,0 +1,4 @@
+// El error de tipo esta en que el comando "Poner" esta esperando un color.  El programa "A" está bien escrito, pero la ejecucion del mismo deberia usar  el parámetro esperado, un color(Azul, Negro, Rojo o Verde).
+
+//Discutir por que es importante documentar el tipo de un parametro junto   con el proposito y la precondicion.
+// Para saber que tipo de valor es el que esta esperando el parametro de un  programa, es importante señalar cual es en la precondicion.

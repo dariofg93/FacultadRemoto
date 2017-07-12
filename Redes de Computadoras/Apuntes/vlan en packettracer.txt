@@ -1,0 +1,10 @@
+Teniendo 2 switch y 1 router
+
+Desde sitch.. en vlan database numero: 3, nombre: jose
+Luego desde las interfaces pones la interface y desde ahi la vlan que queres..
+
+
+Luego conectar router a una interface q esta en vlan 1... y otro mas que este en otra vlan(vlan 2), todo dentro del switch 1
+(poner las vlans en el switch 2 si se quiere tener las mismas vlans con las mismas bocas)
+
+para poner trunk, cambiar accessor por trunk

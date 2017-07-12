@@ -1,0 +1,46 @@
+VLAN: En Switch
+
+vlan x (Siendo x un número cualquiera)
+name "nombre de vlan"
+interface range fa0/x-y (Siendo x e y el rango de las interfaces como troncales)
+switchport mode trunk
+switchport trunk native vlan 1
+
+interface range fa0/x-y (Siendo x e y los puertos del switch ocupados por la vlan)
+switchport mode access
+switchport access vlan n (Siendo n el número de una vlan definida previamente)
+
+VLAN: En Router
+
+interface fa0/0.n (Donde n es el número de la subinterfaz)
+encapsulation dot1Q n (Donde n es el número de la vlan correspondiente)
+ip address gwr mask (Donde gwr es el gateway de la vlan que está siendo configurada y mask, la máscara de la misma)
+interface fa 0/0
+no shutdown (Esto último permite prender todas las subinterfaces)
+
+
+#############################################################
+
+NAT:
+
+ip nat pool CABANAT 200.5.224.1 200.5.224.1
+netmask 255.255.255.128
+
+
+En la siguiente tabla se muestra el nat de todos los servidores en los que se implementó NAT estático:
+
+
+NAT: Dinamico
+
+-configure terminal
+-ip access-list standard CABANAT
+-permit 192.168.56.128 0.0.0.63
+-exit
+-ip nat pool CABAPOOL 200.5.224.1 200.5.224.1 netmask 255.255.255.128
+-ip nat inside source list CABANAT pool CABAPOOL overload
+
+NAT: Estatico
+
+-enable
+-configure terminal
+-ip nat inside source static IP_Privada IP_Publica

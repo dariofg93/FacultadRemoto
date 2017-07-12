@@ -1,0 +1,39 @@
+Base de datos no relacionales
+
+ACID = atomicidad, consistencia, isolation, durabilidad...
+
+atomicidad: Se hace todo o nada.
+consistencia: habiendo una foreing key, esa debe existir en otra tabla.
+isolation: entre 2 transacciones no se pueden ver entre si hasta que no se comiteen.
+durabilidad: Q dure en el tiempo los cambios que se realizan.
+
+ _______________________________________________________________
+|Cluster: Conjunto de base de datos con informacion distribuida.|
+
+
+tipos de base de datos NoSQL:
+(Utilizadas segun su performance)
+
+clave-valor: funcionan como un mapa... No esta pensada para persistir un modelo como bichomon.
+Es pensada para guardar registros temporales en cache, aprovechando su velocidad en el acceso.(Redis, Riak o Aeospike)
+
+orientadas A columnas: Conformadas por COlumn Family(en primer nivel) y columns(en segundo), son mas dinamicas, entre otras cosas se pueden agregar columnas sin necesidad de "llenar" datos en cada linea, cosa que con las bases de datos relacionales no se puede. (HBase, Cassandra)
+
+base de datos Documentales: Permite realizar consultas mas avanzadas sobre el contenido del documento JSON(mongoDB).
+
+Base de datos en Grafos: Agiliza consultas que serian muy lentas con una base de datos relacionales (neo4j).
+
+orientadas a objetos: No entendi... Pero son representadas mediantes objetos(DTOs ejem...) (Zope, Gemstone).
+
+SQL vs NoSQL:
+*Las NoSQL no fueron pensadas para usar joins.
+*Existen muchas bbdd creadas.
+*No hay una bbdd universal que sirva para cualquier datos.
+*Las NoSQL son mas livianas en el sentido de que no requieren muchos recursos computacionales para funcionar, con excepciones(cassandra).
+*Las NoSQL no usan tanta normalizacion como en SQL, esto a costo de tener datos repetidos da mayor velocidad a las consultas.
+
+
+cap theorem:
+Availability: Que siempre este disponible ante una consulta
+Partition Tolerance: Que una determinada particion de la base de datos general se pueda distribuir/copiar a otra bbdd.
+Consistency: habiendo una foreing key, esa debe existir en otra tabla.

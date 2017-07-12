@@ -1,0 +1,39 @@
+[31mDebug CiberTest>>#test05ElCiberRetornaLaCompuConUnProgramaInstalado
+[0mCiberTest>>test05ElCiberRetornaLaCompuConUnProgramaInstalado
+CiberTest(TestCase)>>performTest
+CiberTest(TestCase)>>runCase in Block: [ ...
+BlockClosure>>ensure:
+CiberTest(TestCase)>>runCase
+TestResult>>runCase: in Block: [ ...
+BlockClosure>>on:do:
+TestResult>>runCase:
+CiberTest(TestCase)>>run:
+TestSuite>>run: in Block: [ :each | ...
+OrderedCollection>>do:
+TestSuite>>run: in Block: [ ...
+BlockClosure>>ensure:
+TestSuite>>run:
+TestSuite>>run
+PackageTreeNautilusUI(NautilusUI)>>debugTest: in Block: [ value run ]
+BlockClosure>>ensure:
+PackageTreeNautilusUI(NautilusUI)>>debugTest: in Block: [ :value | ...
+[0m[31mDebug CiberTest>>#test05ElCiberRetornaLaCompuConUnProgramaInstalado
+[0mCiberTest>>test05ElCiberRetornaLaCompuConUnProgramaInstalado
+CiberTest(TestCase)>>performTest
+CiberTest(TestCase)>>runCase in Block: [ ...
+BlockClosure>>ensure:
+CiberTest(TestCase)>>runCase
+TestResult>>runCase: in Block: [ ...
+BlockClosure>>on:do:
+TestResult>>runCase:
+CiberTest(TestCase)>>run:
+TestSuite>>run: in Block: [ :each | ...
+OrderedCollection>>do:
+TestSuite>>run: in Block: [ ...
+BlockClosure>>ensure:
+TestSuite>>run:
+TestSuite>>run
+PackageTreeNautilusUI(NautilusUI)>>debugTest: in Block: [ value run ]
+BlockClosure>>ensure:
+PackageTreeNautilusUI(NautilusUI)>>debugTest: in Block: [ :value | ...
+[0m

@@ -1,0 +1,14 @@
+procedure PonerEnLindantes(c)
+{
+ repeatWith dir in minDir()..maxDir()
+ {
+  Mover(dir)
+  Poner(c)
+  Mover(opuesto(dir))
+ }
+}
+
+procedure Main()
+{
+ PonerEnLindantes(Verde)
+}

@@ -1,0 +1,14 @@
+procedure Main()
+{
+ Poner(Azul)
+ Mover(Este)
+ Poner(Negro)
+ Mover(Este)
+ Poner(Rojo)
+ Mover(Este)
+ Poner(Verde)
+ Mover(Oeste)
+ Mover(Oeste)
+ Mover(Oeste)
+}
+

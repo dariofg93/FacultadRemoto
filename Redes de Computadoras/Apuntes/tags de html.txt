@@ -1,0 +1,98 @@
+* HTML Documents
+
+Todo documento html comienza con <!DOCTYPE html>...
+
+...y sigue con <html> finalizando con </html>.
+
+La parte visible del html documento  se escribe entre <body> y </body>.
+
+* Encabezados se escriben desde <h1> a <h6> tags.
+
+<h1> mas importantante 
+<h6> menos importante
+
+* Los párrafos se escriben entre <p> y </p> tags
+
+* El Texto dentro de un <pre> tages mostrado en un texto de ancho fijo, y preserva los espacios y lineas en blanco. PERO MUESTRA LAS LETRAS MAS CHICAS.
+
+* Links definidos con <a> tag:
+	 <a href="http://www.w3schools.com">This is a link</a> 
+
+TIP:
+The link's destination is specified in the href attribute. 
+
+Attributes are used to provide additional information about HTML elements.
+
+* Imagenes son definidas con <img> tag.
+
+The source file (src), alternative text (alt), width, and height are provided as attributes:
+
+<img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+
+* <br> tag: Se escribe solo, sin argumentos y deja una linea en blanco
+
+* El <hr> tag define una linea horizontal en la pagina.
+
+Usualmente se utiliza para separar contenido en la pagina HTML
+
+***********************************************************
+***********************************************************
+
+HTML ATTRIBUTES: name="value"
+
+* The language of the document can be declared in the <html> tag. Y se declara con el atributo lang.
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<body>
+
+...
+
+</body>
+</html>
+
+------------------------------------------------------------
+
+* HTML Style: <tagname style="property:value;">
+
+- HTML Background Color: Cambiar color del fondo de la pagina
+	<body style="background-color:powderblue;">
+
+- HTML Text Color: Cambiar el color a los textos
+	<h1 style="color:blue;">This is a heading</h1>
+	<p style="color:red;">This is a paragraph.</p>
+
+- HTML Fonts: Cambiar fuente a los textos
+	<h1 style="font-family:verdana;">This is a heading</h1>
+	<p style="font-family:courier;">This is a paragraph.</p>
+
+- HTML Text Size: Cambiar el tamaño de un texto
+	<h1 style="font-size:300%;">This is a heading</h1>
+	<p style="font-size:160%;">This is a paragraph.</p>
+
+- HTML Text Alignment: Ubica el texto al margen deseado
+	<h1 style="text-align:center;">Centered Heading</h1>
+	<p style="text-align:center;">Centered paragraph.</p>
+
+- Cambia formato de texto HTLM: Es posible poner mas de 1
+TAG 	  	DESCRIPCION
+<b> 		Texto en negritas
+<strong>	Texto importante(en negritas)
+<em> 		Texto enfatizado, que resalta(letra italica)
+<i> 		Texto en italica
+<small> 	Texto Pequeño
+<mark> 		Texto marcado, como con fibron amarillo ponele...
+<sub> 		Texto pequeño y por debajo de la linea normal
+<sup> 		Texto pequeño y por encima de la linea normal
+<ins> 		Texto subrayado
+<del> 		Texto tachado
+
+* <q> El texto en este espacio irá entre comillas </q>
+
+* PARA HACER FORMULARIOS EN HTML: forms y campos de html
+
+http://www.logistica.maveric.com.ar
+
+https://www.logisticavip.maveric.com.ar
+https://162.14.197.7

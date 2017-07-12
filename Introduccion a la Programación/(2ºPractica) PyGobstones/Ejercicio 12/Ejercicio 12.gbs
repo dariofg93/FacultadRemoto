@@ -1,0 +1,7 @@
+procedure MoverOeste3() {
+//Propósito:Mover el cabezal 3 celdas hacia el Oeste.
+//Precondición:Deben haber al menos 3 celdas al Oeste contando desde la celda actual.
+ Mover(Oeste)
+ Mover(Oeste)
+ Mover(Oeste)
+}

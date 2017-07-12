@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1242995302 source:c:\users\administrador\desktop\introduccion a la programación\biblioteca(cgobstones)\dir.cpp
+	"Dir.h"
+
+1242823820 c:\users\administrador\desktop\introduccion a la programación\biblioteca(cgobstones)\dir.h
+	<string>
+	<iostream>
+
+1254312872 source:c:\users\administrador\desktop\introduccion a la programación\biblioteca(cgobstones)\gobstones.cpp
+	"Gobstones.h"
+	<iostream>
+	<stdlib.h>
+	<sstream>
+	<map>
+	<cstdlib>
+	<iostream>
+
+1258394122 c:\users\administrador\desktop\introduccion a la programación\biblioteca(cgobstones)\gobstones.h
+	<string>
+	"Color.h"
+	"Dir.h"
+
+1242823820 c:\users\administrador\desktop\introduccion a la programación\biblioteca(cgobstones)\color.h
+	<string>
+	<iostream>
+
+1381619331 source:c:\users\administrador\desktop\introduccion a la programación\cgobstones practicas\practica 6(9)\main.cpp
+	<iostream>
+	"../../Biblioteca(CGobstones)/Gobstones.h"
+
+1242995302 source:c:\users\administrador\desktop\introduccion a la programación\biblioteca(cgobstones)\color.cpp
+	"Color.h"
+

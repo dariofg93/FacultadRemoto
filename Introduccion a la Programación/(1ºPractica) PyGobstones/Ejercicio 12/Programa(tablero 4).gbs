@@ -1,0 +1,25 @@
+procedure LineaDeTresAzules()
+{
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+}
+
+
+procedure Main()
+{
+ IrAlOrigen()
+ LineaDeTresAzules()
+ Mover(Norte)
+ Mover(Norte)
+ LineaDeTresAzules()
+ Mover(Norte)
+ Mover(Norte)
+ Mover(Oeste)
+ Mover(Oeste)
+ Mover(Oeste)
+ Mover(Oeste)
+ LineaDeTresAzules()
+}

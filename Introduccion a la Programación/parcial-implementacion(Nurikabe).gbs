@@ -1,0 +1,311 @@
+procedure IrAlExtremo(dir) {
+    while(puedeMover(dir)) {
+        Mover(dir)
+    }
+}
+
+procedure SiguienteCelda() {
+    if (puedeMover(Oeste)) {
+        Mover(Oeste)
+    } else {
+        Mover(Sur)
+        IrAlExtremo(Este)
+    }
+}
+
+procedure InicializarRecorridoDeTablero() {
+    IrAlExtremo(Norte)
+    IrAlExtremo(Este)
+}
+
+function esUltimaCelda() {
+    return(not puedeMover(Sur) && not puedeMover(Oeste))
+}
+
+function colorRio() {
+    return(Negro)
+}
+
+function esRio() {
+    return(hayBolitas(colorRio()))
+}
+
+function esIsla() {
+    return(not esRio())
+}
+
+function colorMarca() {
+    return(Rojo)
+}
+
+function estaMarcada() {
+    return(hayBolitas(colorMarca()))
+}
+
+function hayIslaAlParcial(dir) {
+// Propósito: Saber si la celda en dirección "dir"
+//            es una isla.
+// Precondición: Tiene que haber una celda en dirección
+//               "dir".
+    Mover(dir)
+    return(esIsla())
+}
+
+function hayIslaAl(dir) {
+// Propósito: Saber si la celda en dirección "dir"
+//            es una isla.
+// Precondición: NA.
+    return(puedeMover(dir) && hayIslaAlParcial(dir))
+}
+
+function estaMarcadaAl(dir) {
+    Mover(dir)
+    return(estaMarcada())
+}
+
+function lindanteConMarcada() {
+    lindanteMarcada := False
+    repeatWith d in minDir()..maxDir() {
+        lindanteMarcada := lindanteMarcada || (hayIslaAl(d) && estaMarcadaAl(d))
+    }
+    return(lindanteMarcada) 
+}
+
+function esCeldaMarcable() {
+// Propósito: Saber si es una celda que se pueda marcar
+// Precondición: Ninguna.
+    
+    
+    return(esIsla() && not estaMarcada() 
+           && lindanteConMarcada())
+}
+
+procedure Marcar() {
+    Poner(colorMarca())
+}
+
+function hayCeldaMarcable() {
+// Propósito: Saber si hay alguna celda marcable en el
+//            tablero.
+// Precondición: NA.
+
+    resultado := False
+
+    InicializarRecorridoDeTablero()
+    while(not esUltimaCelda()) {        
+        resultado := resultado || esCeldaMarcable()
+        SiguienteCelda()
+    }   
+    resultado := resultado || esCeldaMarcable()
+
+    return(resultado)
+}
+
+procedure IrACeldaMarcable() {
+// Propósito: Posiciona el cabezal en una celda marcable.
+// Precondición: Tiene que haber una celda marcable.
+    InicializarRecorridoDeTablero()
+    while (not esUltimaCelda() && not esCeldaMarcable()) {
+        SiguienteCelda()
+    }   
+}
+
+procedure MarcarIsla() {
+// Propósito: Marcar todas las celdas de la isla donde esta posicionado
+//            el cabezal.
+// Precondición: La celda actual forma parte de una isla y no hay ninguna
+//               marca en el tablero.    
+    Marcar()
+    while(hayCeldaMarcable()) {
+        IrACeldaMarcable()
+        Marcar()
+    }
+}
+
+function nroBolitasTotal(unColor) {
+    InicializarRecorridoDeTablero()
+    acumulador := 0
+    while(not esUltimaCelda()) {
+        acumulador := acumulador + nroBolitas(unColor)
+        SiguienteCelda()
+    }
+    acumulador := acumulador + nroBolitas(unColor)
+    
+    return(acumulador)
+}
+
+function tamanoIsla() {
+// Propósito: Determinar el tamaño de una isla.
+// Precondición: La celda actual forma parte de una isla y
+//               No hay ninguna celda marcada en el tablero.
+
+    MarcarIsla()    
+    return(nroBolitasTotal(colorMarca()))
+}
+
+procedure PonerN(unColor, unaCantidad) {
+    repeatWith i in 1..unaCantidad {
+        Poner(unColor)
+    }
+}
+
+function esUltimaCeldaRoja() {
+    while (not esUltimaCelda() && not estaMarcada()) {
+        SiguienteCelda()
+    }
+    return(estaMarcada() && not esUltimaCelda())
+}
+
+procedure InicializarRecorridoPorCeldasRojas() {
+    InicializarRecorridoDeTablero()
+    if (not estaMarcada()) {
+        SiguienteCeldaRoja()    
+    }
+}
+
+procedure SiguienteCeldaRoja() {
+    SiguienteCelda()
+    while(not estaMarcada()) {
+        SiguienteCelda()
+    }
+}
+
+function colorIndicador() {
+    return(Azul)
+}
+
+function esIndicador() {
+    return(hayBolitas(colorIndicador()))
+}
+
+
+function nroIndicadoras() {
+// Propósito: Determinar cuantas celdas indicadoras 
+//            hay en la isla que forma parte de la celda actual.
+// Precondición: La celda actual forma parte de una isla y no hay
+//               niguna celda marcada en el tablero.
+    MarcarIsla()
+    
+    cantidad := 0
+    InicializarRecorridoDeTablero()
+    while (not esUltimaCelda()) { 
+        if (esIndicadorMarcado()) {
+            cantidad := cantidad + 1
+        }    
+        SiguienteCelda()
+    }
+    if (estaMarcada() && esIndicador()) {
+        cantidad := cantidad + 1
+    }    
+    return(cantidad)
+}
+
+function esIndicadorMarcado() {
+    return(estaMarcada() && esIndicador())
+}
+
+procedure IrAIndicadorMarcado() {
+// Propósito: Ir a algún indicador marcado.
+// Precondición: Que haya algún indicador marcado.
+    InicializarRecorridoDeTablero()
+    while(not esUltimaCelda() && not esIndicadorMarcado()) {        
+        SiguienteCelda()
+    }
+    
+
+}
+
+function nroIndicador() {
+// Propósito: Saber cuál es el número del indicador para la isla actual.
+// Precondición: Hay una única celda indicadora en la isla. No hay celdas
+//               marcadas en el tablero. La celda actual forma parte de una
+//               isla.
+    MarcarIsla()
+    IrAIndicadorMarcado()
+    return(nroBolitas(colorIndicador()))
+}
+
+function esIslaResuelta() {
+// Propósito: Saber la isla sobre la cual está posicionado el cabezal
+//            está resuelta.
+// Precondición: Estemos situados en una isla.    
+    return(nroIndicadoras() == 1 && tamanoIsla() == nroIndicador())
+}
+
+function quedanIslasSinResolver() {
+// Propósito: Determinar si queda alguna isla sin resolver.
+// Precondición: No hay ninguna celda marcada en el tablero.
+    haySinResolver := False
+    InicializarRecorridoDeTablero()
+    while(not esUltimaCelda()) {
+        // procesar
+        if (esIsla() && not esIslaResuelta()) {
+            haySinResolver := True
+        }
+        SiguienteCelda()
+    }
+    //procesar
+    if (esIsla() && not esIslaResuelta()) {
+        haySinResolver := True
+    }
+    return(haySinResolver)
+}
+
+function hayRioAlTotal(dir) {
+    return(puedeMover(dir) && hayRioAl(dir))
+}
+
+function hayRioAl(dir) {
+// Precondición: Debe haber una celda en dirección "dir"
+    Mover(dir)
+    return(esRio())
+}
+
+procedure MoverDiagonal(dir) {
+    Mover(dir)
+    Mover(siguiente(dir))
+}
+
+function hayRioDiag(dir) {
+// Precondición: Debe haber una celda en dirección "dir" y otra
+//               celda en la dirección siguiente a "dir" (mirando
+//               la rosa de los vientos, donde la siguiente es 
+//               la contigua en el sentido de las agujas del reloj).
+    MoverDiagonal(dir)
+    return(esRio())
+}
+
+function hayRioDiagTotal(dir) {
+    return(puedeMoverDiag(dir) && hayRioDiag(dir))
+}
+
+function puedeMoverDiag(dir) {
+    return(puedeMover(dir) && puedeMover(siguiente(dir)))
+}
+
+function estaEnLagoConPivote(dir) { 
+// Propósito: Saber si la celda actual forma parte de un lago hacia
+//            la diagonal dir,siguiente(dir)
+// Precondición: NA.
+    return (hayRioAlTotal(dir) &&
+    hayRioDiagTotal(dir) &&
+    hayRioAlTotal(siguiente(dir)))
+}
+
+function estaEnLago() {
+// Propósito: Decir si la celda actual forma parte de un lago.
+// Precondición: NA.
+    esta := False
+    repeatWith juan in minDir()..maxDir() {
+        esta := esta || estaEnLagoConPivote(juan)
+    }
+    return(esta)
+}
+
+procedure Main() {
+    if (estaEnLago()) {
+        Poner(Verde)
+    } else {
+        Poner(Rojo)
+    }
+}

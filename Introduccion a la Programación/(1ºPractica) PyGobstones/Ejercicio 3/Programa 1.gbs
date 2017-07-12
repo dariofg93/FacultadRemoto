@@ -1,0 +1,7 @@
+procedure Main()
+{
+ Poner(Verde)
+ Poner(Negro)
+ Poner(Rojo)
+ Poner(Azul)
+}

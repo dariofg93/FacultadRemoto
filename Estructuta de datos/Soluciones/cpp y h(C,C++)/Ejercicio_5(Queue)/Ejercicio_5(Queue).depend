@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1447112270 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_5(Queue)/main.cpp
+	<iostream>
+	"Queue.h"
+
+1447110457 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_5(Queue)/Queue.cpp
+	"Queue.h"
+
+1447090985 /media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_5(Queue)/Queue.h
+	<iostream>
+

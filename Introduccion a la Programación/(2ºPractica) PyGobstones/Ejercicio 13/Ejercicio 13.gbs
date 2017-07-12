@@ -1,0 +1,33 @@
+procedure MoverOeste3() {
+//Propósito:Mover el cabezal 3 celdas hacia el Oeste.
+//Precondición:Deben haber al menos 3 celdas al Oeste contando desde la celda actual.
+ Mover(Oeste)
+ Mover(Oeste)
+ Mover(Oeste)
+}
+
+procedure PonerUnaDeCada(){
+//Propósito:Poner una bolita de cada uno de los 4 colores en la celda actual.
+ Poner(Rojo)
+ Poner(Verde)
+ Poner(Azul)
+ Poner(Negro)
+}
+
+procedure PonerLineaMulticolor4() {
+//Proposito:Realizar una linea de 4 celdas hacia el Este, poniendo en cada   celda un bolita de cada color. El cabezal termina en la celda actual.
+//Precondicion:Tienen que haber al menos 4 celdas al Este de la actual.
+ PonerUnaDeCada()
+ Mover(Este)
+ PonerUnaDeCada()
+ Mover(Este)
+ PonerUnaDeCada()
+ Mover(Este)
+ PonerUnaDeCada()
+ MoverOeste3()
+}
+
+procedure Main()
+{
+ PonerLineaMulticolor4()
+}

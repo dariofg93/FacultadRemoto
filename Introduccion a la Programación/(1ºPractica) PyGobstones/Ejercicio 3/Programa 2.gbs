@@ -1,0 +1,12 @@
+procedure PonerUnaBolitaDeCadaColor()
+{
+ Poner(Verde)
+ Poner(Negro)
+ Poner(Rojo)
+ Poner(Azul)
+}
+
+procedure Main()
+{
+ PonerUnaBolitaDeCadaColor()
+}

@@ -1,0 +1,22 @@
+procedure SacarN(n,c)
+//Proposito: Saca bolitas de color(c) tantas veces como (n) lo diga.
+//Precondicion: Deben haber la cantidad de bolitas que se desea sacar del ese color.
+{
+ repeatWith i in 1..n
+ {
+  Sacar(c)
+ }
+}
+
+procedure SacarTodas(c)
+{
+ repeatWith i in 1..(nroBolitas(c))
+ {
+  SacarN((nroBolitas(c)),c)
+ }
+}
+
+procedure Main()
+{
+ SacarTodas(Verde)
+}

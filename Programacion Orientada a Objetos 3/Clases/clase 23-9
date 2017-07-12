@@ -1,0 +1,11 @@
+Clase objetos 3 del 23-09-16:
+
+- Funciones
+- Repaso de Inmutabilidad
+- Pattern matchinG
+- Constructores: apply() /Deconstructores: unapply()
+- Optional
+- Varianza, Covarianza y Contravarianza (VER BITACORA 16-9)
+- Lo interesante de la programacion funcional es ser explicitos con los efectos de lado(osea no pensar mucho en la memoria al momento de programar)
+- Flujo de transformaciones(a traves de un imput se transforma en un output)
+- Se vio el patron Chain of Responsability, (imput output.. imput output.. imput output..) ()->()->()-> true

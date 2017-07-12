@@ -1,0 +1,4 @@
+procedure EntenderEnTresMinutos()
+{
+/*El programa ejecuta 3 cuadrados uno encima del otro separados por una linea en blanco(cada cuadrado es de 3x3). El cabezal termina al Norte del extremo   Noroeste del ultimo cuadrado*/
+}

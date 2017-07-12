@@ -1,0 +1,44 @@
+Aclaracaciones tp de redes:
+
+PRESENTANCION DEL TRABAJO(informe)
+
+* Diseño capa 2
+
+como asignar las vlans en buenos aires
+
+capa 2 es switches, vlans es una forma de dividir en pedazos los switches.
+tranks = cable entre 2 vlans para subnetear a diferentes redes = 802.1q, ajustar las cantidades de bocas de switches segun la cantidad de ip
+
+* Diseño capa 3
+
+lo que se hace con la ip: subredes, ruteo, NAT y describir como se hizo...
+
+* Descripcion de Dhcp: lo mismo que el tp anterior, un servidor dhcp por cada LAN ó que el router de las direccion, funcionando como DHCP ó que haya un servidor DHCP que reparta ips entre las 3 redes...
+	Las 2 ultimas opciones requieren uso exclusivo de consola de router...
+
+* Problemas encontrados... cosas que no se llegaron a hacer...
+
+
+** Ejemplo Informe En Moron...
+
+capa 1: 1 switch, con 20 cables UTP a cada uno.
+capa 2: Se asigno a una sola Vlan.
+capa 3: IP: xxxx.xxxx.xxxx.xxxx/27.
+
+si tiene un servidor web...
+
+capa 7: Tiene un servidor web levantado blablabla....
+
+** En La Plata
+
+capa 2: Cambia al haber 2 pisos... tiene que haber por lo menos 2 sitch(uno en cada piso) y hay que conectar los switch con un cable de (creo que fibra optica, no me acuerdo que... lpm)
+
+*** El tp se resuelve con una ip/24 privada, pero para hacer NAT se usa una ip/25 publica y para el contacto con el ISP  se usa una ip/30...
+	Hay que elegir una red de una sede para hacer NAT... todabia no entiendo que quiere decir eso...
+		Es una quilombo (NAT, PAT)
+
+**** Poner rutas estaticas en los reuters de cada sede(para lucirse RIP, OSPF, etc...)
+
+***** Sacar una ip POR NAT que simule llegar a google.
+
+FECHA FINAL DE ENTREGA: Posiblemente entre el 29 nov y 6 dic(no llegamos ni en pedo)

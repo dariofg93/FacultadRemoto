@@ -1,0 +1,23 @@
+function puedeMoverN(n,d)
+{
+ return(puedeMover(d))
+}
+
+procedure MoverSiPuede(d)
+{
+ if(puedeMover(d))
+ { Mover(d) }
+}
+
+procedure MoverALoSumo(n,d)
+{
+ repeatWith i in 1..n
+ {
+  MoverSiPuede(d)
+ }
+}
+
+procedure Main()
+{
+ MoverALoSumo(10,Este)
+}

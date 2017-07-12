@@ -1,0 +1,250 @@
+
+type Cliente is record
+{
+ field horaIngresoCola //numero
+ field cantProductos   //numero
+}
+
+type Caja is record
+{
+ field numero           //numero
+ field clienteEsperando //lista de Cliente
+}
+
+type Super is record
+{
+ field horaActual        //numero
+ field lineaDeCajas      //LineaDeCaja:= Lista de Cajas
+ field clientesComprando //Lista de Cliente
+}
+
+
+
+
+
+
+
+function cajaMenosOcupada(lineaDeCajas)
+{
+ lsrec:= lineaDeCajas;
+ cmo:= head(lsrec);
+ lsrec:= tail(lsrec);
+
+ while (not isNil(lsrec))
+{
+ if((numClientes((head(lsrec)) < numClientes(cmo)) || 
+(numClientes(head(lsrec) == numClientes(cmo) && nroCajaMenor(head(lsrec), cmo)))
+{
+ cmo:= head(lsrec);
+}
+ lsrec:= tail(lsrec);
+}
+ return(cmo)
+}
+
+
+function numClientes(caja)
+{
+ num:= 0;
+ foreach c in clienteEsperando(caja)
+{
+ num:= num + 1;
+}
+ return(num)
+}
+
+
+function nroCajaMenor(caja1, caja2)
+//proposito: retorna true si la caja1 es menor que la caja2
+{
+ return(numero(caja1) < numero(caja2))
+}
+
+
+function ingresaColaCliente(lineaDeCajas, cliente)
+{
+ l:= lineaDeCajas;
+ c:= cajaMenosOcupada(lineaDeCajas);
+ c.clienteEsperando:= clienteEsperando(c) ++ [cliente];
+ l:= modificarLista(l, c);
+ 
+ return(l)
+}
+
+ function modificarLista(lista, caja)
+{
+ lsrec:= lista;
+ lsres:= [];
+ 
+ while (numero(head(lsrec)) =/ numero(caja))
+{
+ lsres:= lsres ++ [head(lsrec)];
+ lsrec:= tail(lsrec);
+}
+ return(lsres ++ [caja] ++ [tail(lsrec)])
+}
+ 
+ 
+function avanzaCaja(lineaDeCajas, nroCaja)
+{
+ lsres:= lineaDeCajas;
+ caja:= buscarCaja(lineaDecajas, nroCaja);
+ 
+ if(clientesEsperando(caja) == [])
+ {
+  lsres:= lineaDeCajas;
+ }
+ else
+  
+ foreach c in clientesEsperando(caja)
+{
+ if(cantidadProductos(c) == 0)
+{
+ caja.clientesEsperando:= quitarClienteDeLista(clientesEsperando(caja), c);
+ lsres:= modificarLista(lsres, caja);
+}
+  return(lsres)
+}
+
+function avanzaLineaDeCajas(lineaDeCajas)
+{
+ lsres:= lineaDeCajas;
+
+ foreach c in lineaDeCajas
+{
+ lsres:= avanzaCaja(lsres, numero(c));
+}
+ return(lsres)
+}
+
+
+function finalDeLasCompras(whileMart)
+{
+ w:= whilemart;
+ lsrec:= clientesQueIngresanALas(clientesComprando(w), hora(w));
+ lsc:= clientesQueNoIngresanALas(clientesComprando(w), hora(w));
+ 
+foreach c in lsrec
+{
+ w.lineaDeCajas:= ingresaColaCliente(lineaDeCajas(w), c);
+ w.lineaDeCajas:= lineaDeCajas(w) ++ [lsc];
+}
+ return(w)
+}
+
+
+
+function pasoDelTiempo(whileMart)
+{
+ w:= whileMart;
+ lcc:= clientesQueIngresanALas(clientesComprando(w), hora(w));
+ lcc2:= clientesQueNoIngresanALas(clientesComprando(w), hora(w));
+
+ foreach c in lcc
+{
+ if(cantProductos(c) == 0)
+{
+ w.clientesComprando:= quitarCliente(clientesComprando(w), c);
+ w.LineaDeCajas:= ingresaColaCliente(lineaDeCajas(w), c);
+}
+}
+ w.lineaDeCajas:= procesarPTotal(lineaDeCajas(w));
+ w.horaActual := horaActual(w) + 1;
+
+ return(w)
+}
+
+
+function procesarPTotal(lineaDeCajas)
+{
+ lsrec:= lineaDeCajas;
+ lsres:= [];
+ while (not isNil(lsrec))
+{
+ lsres:= lsres ++ [modificarClientesEnCaja(head(lsrec))];
+ lsrec:= tail(lsrec);
+}
+ return(lsres)
+}
+
+
+
+
+function modificarClientesEnCaja(caja)
+{
+ c:= caja;
+ lsrec:= clientesEsperando(caja);
+ lsres:= [];
+
+ while (not isNil(lsrec))
+{
+ lsres:= lsres ++ [restarCP(head(lsrec))];
+ lsrec:= tail(lsrec);
+}
+ c.clientesEsperando:= lsres;
+ return(c)
+}
+
+
+
+function restarCP(cliente)
+{
+ c:= cliente;
+ if(cantidadProductos(c) > 0)
+{
+ c.cantProductos:= cantidadProductos(c) - 1;
+}
+ return(c)
+}
+ 
+
+
+function supermercadoVacio(whileMart)
+{
+ w:= whileMart;
+ return((clientesComprando(w) == []) && sinClientesEsperando(lineaDeCajas(w)))
+}
+
+
+function sinClientesEsperando(lineaDeCajas)
+{
+ sinclientes:= true;
+ foreach c in lineaDeCajas
+{
+ if(clientesEsperando(c) == [])
+{
+ sinclientes:= sinclientes && true;
+}
+ else
+{
+ sinclientes:= sinclientes && false;
+}
+ return(sinclientes)
+}
+
+
+
+function horaEnQueQuedaVacio(whileMart)
+{
+ w:= whileMart;
+ while (not(supermercadoVacio(w)))
+{
+ w:= pasoDelTiempo(w);
+}
+ return(horaActual(w))
+}
+
+ 
+
+
+
+
+ 
+
+
+
+ 
+
+
+
+ 

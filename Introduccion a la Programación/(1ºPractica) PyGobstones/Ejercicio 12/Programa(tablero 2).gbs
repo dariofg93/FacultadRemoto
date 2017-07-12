@@ -1,0 +1,48 @@
+procedure LineaDeCincoAzules()
+{
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Oeste)
+ Mover(Oeste)
+ Mover(Oeste)
+ Mover(Oeste)
+}
+procedure LineaDeTresAzules()
+{
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Oeste)
+ Mover(Oeste)
+}
+
+
+procedure Main()
+{
+ IrAlOrigen()
+ LineaDeCincoAzules()
+ Mover(Norte)
+ Mover(Norte)
+ Mover(Norte)
+ Mover(Norte)
+ LineaDeCincoAzules()
+ Mover(Sur)
+ Mover(Este)
+ LineaDeTresAzules()
+ Mover(Sur)
+ Mover(Sur)
+ LineaDeTresAzules()
+ Mover(Este)
+ Mover(Norte)
+ Poner(Azul)
+}
+

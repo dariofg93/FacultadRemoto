@@ -1,0 +1,12 @@
+procedure PonerCincuenta()
+{
+ repeatWith i in 1..50
+ {
+  Poner(Azul)
+ }
+}
+
+procedure Main()
+{
+ PonerCincuenta()
+}

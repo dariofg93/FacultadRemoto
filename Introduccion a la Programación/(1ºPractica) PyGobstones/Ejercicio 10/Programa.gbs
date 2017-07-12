@@ -1,0 +1,24 @@
+procedure Main()
+{
+ Mover(Oeste)
+ Sacar(Verde)
+ Mover(Norte)
+ Sacar(Verde)
+ Mover(Este)
+ Sacar(Verde)
+ Mover(Este)
+ Sacar(Verde)
+ Mover(Sur)
+ Sacar(Verde)
+ Mover(Sur)
+ Sacar(Verde)
+ Mover(Oeste)
+ Sacar(Verde)
+ Mover(Oeste)
+ Sacar(Verde)
+ Mover(Norte)
+ Mover(Este)
+ Sacar(Verde)
+}
+ 
+

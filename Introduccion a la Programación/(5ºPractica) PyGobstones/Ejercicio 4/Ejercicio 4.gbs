@@ -1,0 +1,60 @@
+procedure IrAlInicioT(d1,d2)
+{
+ IrAlExtremo(-d1)
+ IrAlExtremo(-d2)
+}
+
+procedure IrAlExtremo(d)
+{
+ while(puedeMover(d))
+ {
+  Mover(d)
+ }
+}
+
+function puedeMoverT(d1,d2)
+{
+ return(not puedeMover(d1)&&not puedeMover(d2))
+}
+
+procedure MoverT(d1,d2,c)
+{
+ if(puedeMover(d1))
+ {
+  PonerT(c)
+  Mover(d1)
+ }
+ else
+ {
+  Mover(d2)
+  IrAlExtremo(-d1)
+ }
+ PonerT(c)
+}
+
+function celdaVacia()
+{
+ return(nroBolitas(Azul)==0&&nroBolitas(Negro)==0
+      &&nroBolitas(Rojo)==0&&nroBolitas(Verde)==0)
+}
+
+procedure PonerT(c)
+{
+ if(celdaVacia())
+ { Poner(c) }
+}
+
+procedure RecorridoEstandar(d1,d2,c)
+{
+ IrAlInicioT(d1,d2)
+ while(not puedeMoverT(d1,d2))
+ {
+  MoverT(d1,d2,c)
+ }
+}
+
+procedure Main()
+{
+ RecorridoEstandar(Sur,Oeste,Rojo)
+}
+

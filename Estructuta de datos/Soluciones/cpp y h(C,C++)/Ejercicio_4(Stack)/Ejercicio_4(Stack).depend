@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1446938945 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_4(Stack)/main.cpp
+	<iostream>
+	"Stack.h"
+
+1446938999 /media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_4(Stack)/Stack.h
+	<iostream>
+
+1446938990 source:/media/dariofg/datos/Facultad/Estructuras de Datos/Soluciones/cpp y h(C,C++)/Ejercicio_4(Stack)/Stack.cpp
+	"Stack.h"
+

@@ -1,0 +1,13 @@
+procedure PonerTodosLosColores()//Mucho mas sencillo que PonerUnaDeCada() en lo que se refiere a escritura.
+//Es mas rapido usar este procedimiento si Gobstones contara con 32000Colores
+{
+ repeatWith c  in minColor()..maxColor()
+ {
+  Poner(c)
+ }
+}
+
+procedure Main()
+{
+ PonerTodosLosColores()
+}

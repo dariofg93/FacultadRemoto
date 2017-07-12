@@ -1,0 +1,469 @@
+
+
+
+
+/*
+  Aclaraciones a ejercicios
+  Rojo es fuego
+  Verde es Planta
+  Azul es tpo Agua
+*/
+
+
+
+
+  type Pokemon is record
+{
+  field tipo // Color
+  field fuerza // nro
+  field estaVivo// Booleano
+  field nivel //nro
+}
+
+  
+ function esMasFuerte(pok1,pok2)
+//Devuelve un True si el pok1 tiene mas fuerza que el pok2
+{
+ return(fuerza(pok1) > fuerza(pok2))
+}
+
+function esMayorNivel(pok1,pok2)
+//Devuelve un True si el pok1 tiene un nivel mas alto que el pok2
+{
+ return(nivel(pok1) > nivel(pok2))
+}
+
+function potenciarPokemon(pokemon, n)
+//Devuelve el pokemon con la fuerza y el nivel multiplicado por n.
+
+{
+ return(pok(fuerza <- (fuerza(pokemon) * n), nivel <- (nivel(pokemon) * n), tipo <- tipo(pokemon), estaVivo <- estaVivo(pokemon))) 
+}
+
+
+function duplicarValoresAPokemon(pokemon)
+//Devuelve el pokemon con el doble de fuerza y nivel
+{
+ return(pok(fuerza <- (fuerza(pokemon) * 2), nivel <- (nivel(pokemon) * 2), tipo <- tipo(pokemon), estaVivo <- estaVivo(pokemon)))
+}
+
+
+function potenciarPokemonSiEsDeTipo(pokemon, n, c)
+//Potencia el pokemon solo si es del tipo c
+{
+ poke:= pokemon;
+ if (tipo(pokemon) == c)
+{
+ poke:= potenciarPokemon(poke, n);
+}
+ return(poke)
+}
+ 
+
+function destruirPokemon(pokemon)
+//Le saca toda la fuerza y mata al pokemon
+{
+ poke:= pokemon
+ return(poke(fuerza <- 0, nivel <- nivel(pokemon), tipo <- tipo(pokemon), estaVivo <- false)))
+} 
+
+
+
+
+function entrenarPokemones(listaPok, n)
+//Potencia a cada uno de los pokemones en n
+{
+  lsres:= [];
+
+  foreach p in listaPok
+{
+  lsres:= lsres ++ [potenciarPokemon(p,n)];
+}
+  return(lsres)
+}
+
+
+function pokemonesDelTipo(listaPok, c)
+//Devuelve los pokemones de lista recibida que son del tipo c
+{
+ lsres:= [];
+ foreach p in listaPok
+{
+ if (tipo(p) == c)
+{
+ lsres:= lsres ++ [p];
+}
+ return(lsres)
+}
+
+
+function elMasFuerte(listaPok)
+//Devuelve el pokemon de nivel mas alto de toda la lista
+//Si hay dos iguales da lo mismo cual devuelve
+{
+ lsrec:= listaPok;
+ pmax:= head(lsrec);
+
+ while (not isNil(lsrec))
+{
+ if(esMayorNivel(head(lsrec), pmax))
+{
+ pmax:= head(lsrec);
+}
+ lsrec:= tail(lsrec);
+}
+ return(pmax)
+}
+
+
+
+function duplicarValorAlTipo(c, listaDePokemones)
+//Devuelve una copia de la lista de pokemones con aquellos pokemones de tipo C duplicados y los de otro tipos IGUALES
+{
+ lsres:= [];
+
+ foreach p in listaDePokemones
+{
+ if (tipo(p) == c)
+{
+ lsres:= lsres ++ [duplicarValoresAPokemon(p)];
+}
+ else
+{
+ lsres:= lsres ++ [p];
+}
+ return(lsres)
+}
+
+function elMasDebil(listaDePokemones)
+//Devuelve el pokemon de nivel mas bajo de toda la lista
+//Si hay dos iguales da lo mismo cual devuelve
+{
+lsrec:= listaDePokemones;
+masdebil:= head(lsrec);
+ 
+while (not isNil(tail(lsrec)))
+{
+ if(not mayorNivel(head(lsrec), masdebil)
+{
+ masdebil:= head(lsrec);
+}
+ lsrec:= tail(lsrec);
+}
+ return(masdebil)
+}
+
+
+
+
+function pokemonesMuertos(listaPokemones)
+//Devuelve los pokemones muertos de la lista
+{
+ lsrec:= listaPokemones;
+ lsres:= [];
+ while (not isNil(lsrec))
+{
+ if(not estaVivo(head(lsrec))) 
+{
+ lsres:= lsres ++ [head(lsrec)];
+}
+ lsrec:= tail(lsrec);
+}
+ return(lsres)
+}
+
+
+
+
+function cantPokemonesVivos(listaPokemones)
+//Devuelve el nro de pokemones vivos de la lista recibida
+{
+ cant_vivos:= 0
+ foreach p in listaPokemones
+{
+ if(estaVivo(p))
+{
+ cant_vivos:= cant_vivos + 1;
+}
+ return(cant_vivos)
+}
+
+
+function existePokemon(listaPokemones,fuerza, color, nivel)
+//Devuelve un booleano indicando si en la lista existe algun pokemon de ese tipo con esa fuereza y ese nivel
+{
+ existe:= false;
+
+ foreach p in listaPokemones
+
+ if((fuerza(p) == fuerza) && (tipo(p) == color) && (nivel(p) == nivel))
+{
+ existe:= true;
+}
+ return( existe)
+}
+
+type Entrenador is record
+{
+ field lista; //Lista de Pokemones
+ field identificador; //numero
+ field bueno; // Booleano.. si es bueno
+}
+
+
+
+
+function mkEntrenador(i, esBueno)
+//Devuelve un Entrenador con el identificador recibido, bueno o malo segun el segundo parametro, y con una lista VACIA de pokemones
+{
+ return(Entrenador(lista <- [], identificador <- i, bueno <- True))
+}
+
+function Entrenador agregarPokemonAEntrenador(pokemon, entrenador); 
+//Devuelve una copia del entrenador recibido, pero que ahora tiene al pokemon  en su lista de pokemones 
+//Es decir que agrega al pokemon a la lista pokemones del entrenador
+{
+ ent:= entrenador;
+ ent.lista:= lista(ent) ++ [pokemon];
+ return(ent)
+}
+
+function cantidadPokemones(entrenador)
+//Devuelve la cantidad de pokemones del entrenador recibido.(Notar que la funcion devuelve un Numero)
+
+cant:= 0;
+foreach p in lista(entrenador)
+{
+ cant:= cant + 1;
+}
+ return(cant)
+}
+
+function cantidadPokemonesTotales(listaDeEntrenadores)
+//Devuelve la cantidad de pokemones del entrenador recibido.(Notar que la funcion devuelve un Numero)
+{
+ cant:= 0;
+ foreach e in listaDeEntrenadores
+{
+ cant:= cant + cantidadPokemones(e);
+}
+ return (cant)
+}
+
+
+function mayorAntiguedad(entrenador1, entrenador2)
+//Devuelve al entrenador que tiene menor numero de identificacion (no hay 2 entrenadores con el mismo numero).
+{
+ menor:= entrenador2;
+ if(identificador(entrenador1) < identificador(entrenador2))
+{
+ menor:= entrenador1;
+}
+ return(menor)
+}
+
+
+function elMasAntiguo(listaDeEntrenadores);
+//Devuelve al entrenador Mas viejo de la lista que recibe como parametro.(La lista no esta vacia)
+{
+lsrec:= listaDeEntrenadores;
+mas_antiguo:= head(lsrec);
+
+while (not isNil(tail(lsrec)))
+{
+ mas_antiguo:= mayorAntiguedad(mas_antiguo, head(lsrec));
+ lsrec:= tail(lsrec);
+}
+ return(mas_antiguo)
+}
+
+
+function desafio(entrenador1, entrenador2)
+/*Devuelve al Entrenador ganador del desafio.
+El desafio consite en que compitan  1 pokemon de cada entrenador hasta que se acaben los pokemones, y lo hacen el primero con el primero, el segundo con el segundo.. y asi siguiendo...hasta que no haya mas pokemones. 
+Se puede asumir que la lista de pokemones de ambos entrenadores tiene la misma longitud.
+En cada pelea gana el pokemon MAS FUERTE.(si son iguales ningun entrenador gana puntos)
+De haber empate en la cantidad de peleas ganadas, se devuelve el entrenador de mayor antiguedad.
+*/
+{
+ ganador:= entrenador2;
+ pge1:= 0;
+ pge2:= 0;
+
+ ls_e1:= lista(entrenador1);
+ ls_e2:= lista(entrenador2);
+
+
+
+ while (not isNil(ls_e1))
+{
+ if(esMasFuerte(head(ls_e1),head(ls_e2)))
+{
+ pge1:= pge1 + 1;
+}
+ else
+{
+ pge2:= pge2 + 1;
+}
+ ls_e1:= tail(ls_e1);
+ ls_e2:= tail(ls_e2);
+}
+
+if(pge1 > pge2 || (pge1 == pge2 && masAntiguo(entrenador1, entrenador2))
+{
+ ganador:= entrenador1;
+}
+ return(ganador)
+}
+
+
+
+
+function masAntiguo(entrenador1, entrenador2)
+//proposito: es un booleano que indica true si el entrenador1 es mas antiguo que el entrenador2
+{
+ return(identificador(entrenador1) < identificador(entrenador2))
+}
+
+
+function desafioDeEntrenadores(listaDeEntrenadores)
+/*Devuelve al Entrenador ganador del desafio entre todos los entrenadores.
+Primero se desafian el  primero y el segundo, el que gana juega con el tercero, el que gana con el cuarto...
+Es decir el ganador QUEDA EN CHANCHA... jugando con el proximo.
+*/
+{
+ganador:= head(lsrec);
+lsrec:= listaDeEntrenadores;
+
+while (not isNil(tail(lsrec)))
+{
+ ganador:= desafio(ganador, head(lsrec));
+ lsrec:= tail(lsrec);
+}
+ return(ganador)
+}
+
+
+function  fuerzaTotalEntrenador(Entrenador e)
+//Devuelve un nro que es la suma de todas las fuerzas de todos los pokemones del entrenador recibido como parametro
+{
+ suma:= 0;
+
+ foreach p in lista(e)
+{
+ suma:= suma + fuerza(p);
+}
+ return(suma)
+}
+
+function    fuerzaTotalEnBatalla (listaDeEntrenadores)
+//Devuelve un nro que es la fuerza de todos los pokemones de TODOS los entrenadores recibidos
+{
+ ftotal:= 0;
+ foreach e in listaDeEntrenadores
+{
+ ftotal:= ftotal + fuerzaTotalEntrenador(e);
+}
+ return(ftotal)
+}
+
+
+function MejorPokemonParaJugada(Entrenador e);
+/* Si el entrenador es bueno devuelve al Pokemon de mayor nivel y duplica sus valores SOLO. 
+ Si el entrenador es malo devuelve al primer Pokemon de su lista.
+*/
+{
+ if(bueno(e))
+{
+ Pokemon:= duplicarValoresAPokemon(elMasFuerte(lista(e)));
+}
+ else
+{
+ Pokemon:= head(lista(e));
+}
+ return(Pokemon)
+}
+
+function desafioInteligenteMejorDeNJugadas(entrenador1, entrenador2, n)
+/*Devuelve al Entrenador ganador del desafio INTELIGENTE .
+A diferencia del dasafio comun, este desafio es solo EN N jugadas.
+Si el entrenador es bueno siempre jugara el pokemon MAS FUERTE... si el entrenador es malo ira tomando uno a uno los pokemones de su lista...   igual que en el desafio original.
+Notar que no juegan TODOS los pokemones de la lista de los entrenadores recibidos SINO que solo se disputaran N desafios...
+Si hay empate gana el de mayor antiguedad
+Asumir que los entrenadores tienen mas de n pokemones entrenados.
+*/
+{
+ ganador:= entrenador2;
+ lse1:= lista(entrenador1);
+ lse2:= lista(entrenador2);
+ pge1:= 0;
+ pge2:= 0;
+ 
+
+
+foreach 1 in n
+{
+ if (fuerza(MejorPokemonParaJugada(entrenador1)) > fuerza(MejorPokemonParaJugada(entrenador2)))
+{
+ pge1:= pge1 + 1;
+}
+ else
+{
+ pge2:= pge2 + 1;
+}
+ lse1:= tail(lse1);
+ lse2:= tail(lse2);
+}
+ if(pge1 > pge2 || (pge1 == pge2 && masAntiguo(entrenador1, entrenador2)))
+{
+ ganador:= entrenador1;
+}
+ return(ganador)
+}
+
+
+
+function desafioInteligenteMejorDeNJugadas(listaDeEntrenadores,  n)
+/*Devuelve al Entrenador ganador del desafio INTELIGENTE entre todos los entrenadores recibidos por parametro.
+Primero se desafian inteligentemente el  primero y el segundo, el que gana juega con el tercero, el que gana con el cuarto...
+Es decir el ganador QUEDA EN CHANCHA... jugando con el proximo.
+Asumir que todos los entrenadores tienen mas de N pokemones entrenados.
+*/
+{
+ lsrec:= listaDeEntrenadores;
+ ganador:= head(lsrec);
+
+ while (not isNil(tail(lsrec)))
+{
+ ganador:= desafioInteligenteMejorDeNJugadas(ganador, head(lsrec), n)
+ lsrec:= tail(lsrec);
+}
+ return(ganador)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

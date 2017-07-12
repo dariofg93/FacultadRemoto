@@ -1,0 +1,32 @@
+Requisitos:
+* Java 1.8 
+* Eclipse Mars (4.5) o Eclipse Luna (4.4)
+
+1) Instalar ECLEmma plugin
+
+	1.1) From your Eclipse menu select Help -> Eclipse Marketplace.
+	1.2) Search for "EclEmma".
+	1.3) Hit Install for the entry "EclEmma Java Code Coverage".
+	1.4) Follow the steps in the installation wizard.
+	1.5) You will be asked to restart Eclipse. Click "Restart now" to complete the installation.
+
+2) Instalar EvoSuite plugin
+
+	2.1) Select from the menu "Help > Install New Software ...".
+	2.2) Click "Add...", enter http://www.evosuite.org/update in the "Location" field. Click "OK".
+	2.3) Select the entry "EvoSuite JUnit Test Generation".
+	2.4) Click "Next" twice, select the radio button next to "I accept the license agreement" and click the "Finish".
+	2.5) You will be asked to install unsigned content. Click "OK".
+	2.6) You will be asked to restart Eclipse. Click "Restart now" to complete the installation.
+
+3) Ejecutar EvoSuite
+
+	3.1) Crear una clase (ejemplo: com.example.Stack)
+	3.2) Right-click sobre la clase
+	3.3) Elegir la opción "Generate Tests with EvoSuite"
+	3.4) Una vez finalizado, EvoSuite crea un test suite (ejemplo: com.example.Stack_ESTest)
+
+4) Ejecutar ECLEmma (cobertura de código)
+
+	4.1) Right-click sobre el JUNIT test suite (ejemplo: com.example.Stack_ESTest)
+	4.2) Elegir la opción "Coverage As" -> "JUnit Test"

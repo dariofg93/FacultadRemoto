@@ -1,0 +1,226 @@
+
+type Usuario is record
+{
+  field id         //numero
+  field tweets     //Lista de Tweet
+  field seguidores //Lista de numero id
+}
+
+
+
+type Tweet is record
+{
+  field fecha      //numero
+  field hora       //numero
+  field mensaje    //numero
+}
+
+type Twitter is record
+{
+  field usuarios   //Lista de Usuario
+  field proximoId  //numero
+}
+
+
+
+
+function altaDeUsuario(twitter)
+{
+ tw:= twitter;
+ tw.usuarios:= usuarios(tw) ++ [mkNuevoUsuario(proximoId(tw))];
+ tw.proximoId:= proximoId(tw) + 1;
+ return(tw)
+}
+
+
+
+
+function mkNuevoUsuario(proximoId)
+{
+  return(Usuario(id <- proximoId, tweets <- [], seguidores <- []))
+}
+
+
+
+
+function bajaDeUsuario(twitter, id)
+{
+ tw:= twitter
+ tw.usuarios:= quitarUsuarioDeLista(usuarios(tw), id);
+               quitarIdASeguidores(seguidores, id);
+ tw.proximoId:= proximoId(tw) - 1;
+
+
+return(tw)
+}
+ 
+
+function quitarUsuarioDeLista(usuarios, id)
+{
+ us:= usuarios;
+ lsres:= [];
+ while(id(head(us)) =/ id)
+{
+ lsres:= lsres ++ [head(us)];
+ us:= tail(us);
+}
+return(lsres ++ [tail(us)])
+}
+
+
+function quitarIdASeguidores(usuarios, id)
+proposito:= recorre la lista usuarios, si el id pertenece a la lista de seguidores
+del usuario lo elimina, retorna una nueva lista de usuarios
+{
+ usu:= usuarios;
+
+ foreach u in usu
+{
+ if(pertenece(id, seguidores(u)))
+{
+ quitarUsuarioDeLista(seguidores(u), id);
+}
+ return(usu)
+}
+
+
+
+function seguirA(twitter, idSeguidor, idASeguir)
+{
+ 
+ tw:= twitter
+ us:= buscarUsuario(usuarios(tw), idSeguidor);
+ us.seguidores:= seguidores(us) ++ [idASeguir];
+ tw.usuarios:= actualizarLista(usuarios(tw), us);
+
+ return(tw)
+
+}
+
+function actualizarLista(usuarios, usuario)
+{
+//proposito: retorna la nueva lista que se obtiene al modificar el usuario 
+ pasado como parametro
+ precondicion:= el usuario existe en la lista
+
+ls:= usuarios
+lsres:= [];
+
+while(id(head(ls)) =/ id(usuario))
+{
+ lsres:= lsres ++ [head(ls)];
+}
+ return(lsres ++ [usuario] ++ [tail(ls)])
+}
+
+
+
+
+function buscarUsuario(usuarios, id)
+{
+ usu:= usuarios;
+
+ while (id(head(usu)) =/ id)
+{
+ usu:= tail(usu);
+}
+ return(head(usu))
+}
+
+
+
+function tweetear(twitter, idEmisor, fecha, hora, mensaje)
+{
+ tw:= twitter;
+ us:= buscarUsuario(usuarios(tw), idEmisor);
+ us.tweets:= tweets(us) ++ [mkTweet(fecha, hora, mensaje)];
+ tw.usuarios:= actualizarLista(usuarios(tw), us);
+ return(tw)
+}
+
+
+function tweetsVisiblesPorUsuario(twitter, id)
+{
+ lsres:= [];
+
+ foreach u in usuarios(twitter)
+{
+ if(pertenece(id, seguidores(u)))
+{
+ lsres:= lsres ++ [tweets(u)];
+}
+ return(lsres)
+}
+
+
+
+function usuariosMasPopulares(twitter)
+{
+ lsrec:= usuarios(twitter);
+ lsres:= [];
+
+ while (not isNil (lsrec))
+{
+ lsres:= lsres ++ [id(usuarioConMasSeguidores(lsrec)];
+ lsrec:= quitarDeLista(lsrec, usuarioComMasSeguidores(lsrec));
+}
+ return(lsres)
+}
+
+
+
+
+function quitarDeLista(usuarios, usuario)
+{
+ lsrec:= usuario;
+ lsres:= []
+ while (id(head(lsrec)) /= id(usuario))
+{
+ lsres:= lsres ++ [head(lsrec)];
+ lsrec:= tail(lsrec)
+}
+ return(lsres ++ [tail(lsrec)])
+}
+
+
+ 
+
+function numSeguidores(usuario)
+{
+ cant:= 0;
+ foreach s in seguidores(usuario)
+{
+ cant:= cant+1;
+}
+ return(cant)
+}
+
+
+function usuarioConMasSeguidores(usuarios)
+{
+ maseg:= head(usuarios);
+ lsrec:= tail(usuarios);
+
+ while( not isNil(lsrec))
+{
+ if (numSeguidores(head(lsrec)) > numSeguidores(maseg) )
+{
+ maseg:= head(lsrec);
+}
+ lsrec:= tail(lsrec);
+}
+ return(maseg)
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+

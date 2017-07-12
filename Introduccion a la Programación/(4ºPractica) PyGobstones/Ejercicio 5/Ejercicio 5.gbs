@@ -1,0 +1,14 @@
+function hayBolitasAl(c, d)
+{
+//PROPOSITO: Determina si hay bolitas de color (c) en direccion (d).
+--PRECONDICION: Debe haber una celda en direccion (d).
+ Mover(d)
+ return(hayBolitas(c))
+}
+
+function lindanteConColor(c, d)
+{
+//Determina si hay una celda lindante en direccion d con bolitas de color c.
+--Precondicion: No tiene otra precondicion mas que el parametro "d" debe ser una direccion y el parametro "c" debe ser un color.
+ return(puedeMover(d) && hayBolitasAl(c,d))
+}

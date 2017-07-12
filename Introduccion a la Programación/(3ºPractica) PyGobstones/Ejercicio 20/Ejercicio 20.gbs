@@ -1,0 +1,25 @@
+procedure PonerN(n,c)
+{
+ repeatWith i in 1..n
+ {
+  Poner(c)
+ }
+}
+
+procedure Escalera(n,c,d)
+{
+ repeatWith cant in 1..n
+ {
+  PonerN(cant,c)
+  Mover(d)
+ }
+}
+
+procedure Main()
+{
+ while (puedeMover(Oeste))
+ {
+  Mover(Oeste) 
+ }
+ Escalera(3,Verde,Este)
+}

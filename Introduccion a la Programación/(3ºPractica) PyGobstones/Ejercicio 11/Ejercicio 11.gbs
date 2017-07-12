@@ -1,0 +1,12 @@
+procedure PonerTantasVerdesComoRojas()
+{
+ repeatWith i in 1..(nroBolitas(Rojo))
+ {
+  Poner(Verde)
+ }
+}
+
+procedure Main()
+{
+ PonerTantasVerdesComoRojas()
+}

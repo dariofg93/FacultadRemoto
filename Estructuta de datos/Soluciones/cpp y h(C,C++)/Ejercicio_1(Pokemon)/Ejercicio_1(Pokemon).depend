@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1446318125 source:e:\facultad\estructuras de datos\soluciones\cpp y h(c,c++)\ejercicio_1(pokemon)\main.cpp
+	<iostream>
+	<stdio.h>
+	"Pokemon.h"
+
+1446317642 source:e:\facultad\estructuras de datos\soluciones\cpp y h(c,c++)\ejercicio_1(pokemon)\pokemon.cpp
+	<iostream>
+	"Pokemon.h"
+
+1446318168 e:\facultad\estructuras de datos\soluciones\cpp y h(c,c++)\ejercicio_1(pokemon)\pokemon.h
+	<iostream>
+

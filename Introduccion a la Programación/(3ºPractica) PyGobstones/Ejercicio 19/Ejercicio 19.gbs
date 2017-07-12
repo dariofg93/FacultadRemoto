@@ -1,0 +1,21 @@
+procedure PonerN(n,c)
+{
+ repeatWith i in 1..n
+ {
+  Poner(c)
+ }
+}
+
+procedure EscaleraSeisVerdeAlEste()
+{
+ repeatWith cant in 1..6
+ {
+  PonerN(cant,Verde)
+  Mover(Este)
+ }
+}
+
+procedure Main()
+{
+ EscaleraSeisVerdeAlEste()
+}

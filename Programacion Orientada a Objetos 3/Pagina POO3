@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/WebPage">
+<head>
+<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { (function(){function e(a){this.t={};this.tick=function(a,c,b){this.t[a]=[void 0!=b?b:(new Date).getTime(),c];if(void 0==b)try{window.console.timeStamp("CSI/"+a)}catch(d){}};this.tick("start",null,a)}var a,d;window.performance&&(d=(a=window.performance.timing)&&a.responseStart);var f=0<d?new e(d):new e;window.jstiming={Timer:e,load:f};if(a){var c=a.navigationStart;0<c&&d>=c&&(window.jstiming.srt=d-c)}if(a){var b=window.jstiming.load;0<c&&d>=c&&(b.tick("_wtsrt",void 0,c),b.tick("wtsrt_","_wtsrt",d),
+b.tick("tbsd_","wtsrt_"))}try{a=null,window.chrome&&window.chrome.csi&&(a=Math.floor(window.chrome.csi().pageT),b&&0<c&&(b.tick("_tbnd",void 0,window.chrome.csi().startE),b.tick("tbnd_","_tbnd",c))),null==a&&window.gtbExternal&&(a=window.gtbExternal.pageT()),null==a&&window.external&&(a=window.external.pageT,b&&0<c&&(b.tick("_tbnd",void 0,window.external.startE),b.tick("tbnd_","_tbnd",c))),a&&(window.jstiming.pt=a)}catch(g){}})(); })()
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="//www.google.com/images/icons/product/sites-16.ico" />
+<link rel="apple-touch-icon" href="https://ssl.gstatic.com/sites/p/8d698a/system/app/images/apple-touch-icon.png" type="image/png" />
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { function d(b){return document.getElementById(b)}window.byId=d;function g(b){return b.replace(/^\s+|\s+$/g,"")}window.trim=g;var h=[],k=0;window.JOT_addListener=function(b,a,c){var e=new String(k++);b={eventName:b,handler:a,compId:c,key:e};h.push(b);return e};window.JOT_removeListenerByKey=function(b){for(var a=0;a<h.length;a++)if(h[a].key==b){h.splice(a,1);break}};window.JOT_removeAllListenersForName=function(b){for(var a=0;a<h.length;a++)h[a].eventName==b&&h.splice(a,1)};
+window.JOT_postEvent=function(b,a,c){var e={eventName:b,eventSrc:a||{},payload:c||{}};if(window.JOT_fullyLoaded)for(a=h.length,c=0;c<a&&c<h.length;c++){var f=h[c];f&&f.eventName==b&&(e.listenerCompId=f.compId||"",(f="function"==typeof f.handler?f.handler:window[f.handler])&&f(e))}else window.JOT_delayedEvents.push({eventName:b,eventSrc:a,payload:c})};window.JOT_delayedEvents=[];window.JOT_fullyLoaded=!1;
+window.JOT_formatRelativeToNow=function(b,a){var c=((new Date).getTime()-b)/6E4;if(1440<=c||0>c)return null;var e=0;60<=c&&(c/=60,e=2);2<=c&&e++;return a?window.JOT_siteRelTimeStrs[e].replace("__duration__",Math.floor(c)):window.JOT_userRelTimeStrs[e].replace("__duration__",Math.floor(c))}; })()
+</script>
+<script>
+
+  
+
+  var breadcrumbs = [{"path":"/site/programacionhm/home","deleted":false,"title":"Home","dir":"ltr"}];
+  var JOT_clearDotPath = 'https://ssl.gstatic.com/sites/p/8d698a/system/app/images/cleardot.gif';
+
+  
+  var JOT_userRelTimeStrs = ["hace un minuto","hace __duration__ minutos","hace una hora","hace __duration__ horas"];
+
+  
+  
+
+  
+
+  var webspace = {"enableAnalytics":false,"pageSharingId":"jotspot_page","enableUniversalAnalytics":false,"sharingPolicy":"OPENED","siteTitle":"Programaci\u00f3n Avanzada con Objetos","isStartPageEnabled":false,"adsensePublisherId":null,"features":{"validateClientGvizDataSourceUrls":true,"contactStoreMigrationPollForGapi":true,"gapiLoaderUtil":true,"moreMobileStyleImprovements":true,"gadgetsInStratus":true,"accumulativeBubblePanelCreation":true,"fileCabinetScreenReaderFix":true,"freezeStartPageUpdates":false,"publicGadgetSearchInStratus":false,"pageDrafts":false,"mobileOrientationFix":true,"plusBadge":false,"pdfEmbedSupport":false,"jsClickFix":true},"isPublic":true,"isConsumer":true,"serverFlags":{"cajaBaseUrl":"//www.gstatic.com/caja","cajaDebugMode":false},"onepickBaseUrl":"https://docs.google.com","domainAnalyticsAccountId":"","plusPageId":"","signInUrl":"https://www.google.com/accounts/AccountChooser?continue\u003dhttps://sites.google.com/site/programacionhm/home\u0026service\u003djotspot","analyticsAccountId":"","scottyUrl":"/_/upload","homePath":"/","siteNoticeUrlEnabled":null,"plusPageUrl":"","adsensePromoClickedOrSiteIneligible":true,"csiReportUri":"https://gg.google.com/csi","sharingId":"jotspot","termsUrl":"//www.google.com/intl/es/policies/terms/","gvizVersion":1,"editorResources":{"sitelayout":["https://ssl.gstatic.com/sites/p/8d698a/system/app/css/sitelayouteditor.css"],"text":["https://ssl.gstatic.com/sites/p/8d698a/system/js/codemirror.js","https://ssl.gstatic.com/sites/p/8d698a/system/app/css/codemirror_css.css","https://ssl.gstatic.com/sites/p/8d698a/system/js/trog_edit__es.js","https://ssl.gstatic.com/sites/p/8d698a/system/app/css/trogedit.css","/site/programacionhm/_/rsrc/1470851310000/system/app/css/editor.css","https://ssl.gstatic.com/sites/p/8d698a/system/app/css/codeeditor.css","/site/programacionhm/_/rsrc/1470851310000/system/app/css/camelot/editor-jfk.css"]},"sharingUrlPrefix":"/_/sharing","isAdsenseEnabled":true,"domain":"defaultdomain","baseUri":"/site/programacionhm","name":"programacionhm","siteTemplateId":false,"siteNoticeRevision":null,"siteNoticeUrlAddress":null,"siteNoticeMessage":null,"page":{"isRtlLocale":false,"canDeleteWebspace":null,"isPageDraft":null,"parentPath":null,"parentWuid":null,"siteLocale":"en","timeZone":"America/Los_Angeles","type":"text","title":"Home","locale":"es","wuid":"wuid:gx:9a8647fbd435f28","revision":16,"path":"/home","isSiteRtlLocale":false,"pageInheritsPermissions":null,"name":"home","canChangePath":false,"state":"","properties":{},"bidiEnabled":false,"currentTemplate":{"path":"/system/app/pagetemplates/text","title":"P\u00e1gina web"}},"canPublishScriptToAnyone":true,"user":{"keyboardShortcuts":true,"sessionIndex":"","guest_":true,"displayNameOrEmail":"guest","userName":"guest","uid":"","renderMobile":false,"domain":"","namespace":"","hasWriteAccess":false,"namespaceUser":false,"primaryEmail":"guest","hasAdminAccess":false},"gadgets":{"baseUri":"/site/programacionhm/system/app/pages/gadgets"}};
+  webspace.page.breadcrumbs = breadcrumbs;
+
+  
+  var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+
+</script>
+<script type="text/javascript">
+                window.jstiming.load.tick('scl');
+              </script>
+<meta name="title" content="Programación Avanzada con Objetos" />
+<meta itemprop="name" content="Programación Avanzada con Objetos" />
+<meta property="og:title" content="Programación Avanzada con Objetos" />
+<meta name="description" content="Sitio de las materias universitarias &quot;Programación con Herramientas Modernas&quot; de UNSAM, y &quot;Objetos III&quot; de UNQ." />
+<meta itemprop="description" content="Sitio de las materias universitarias &quot;Programación con Herramientas Modernas&quot; de UNSAM, y &quot;Objetos III&quot; de UNQ." />
+<meta id="meta-tag-description" property="og:description" content="Sitio de las materias universitarias &quot;Programación con Herramientas Modernas&quot; de UNSAM, y &quot;Objetos III&quot; de UNQ." />
+<style type="text/css">
+      
+      @font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(//fonts.gstatic.com/s/opensans/v13/PRmiXeptR36kaC0GEAetxp_TkvowlIOtbR7ePgFOpF4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(//fonts.gstatic.com/s/opensans/v13/cJZKeOuBrn4kERxqtaUH3aCWcynf_cDxXwCLxiixG1c.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(//fonts.gstatic.com/s/opensans/v13/k3k702ZOKiLJc3WVjuplzInF5uFdDttMLvmWuJdhhgs.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(//fonts.gstatic.com/s/opensans/v13/xjAJXh38I15wypJXxuGMBp0EAVxt0G0biEntp43Qt6E.ttf) format('truetype');
+}
+
+    
+    </style>
+<link rel="stylesheet" type="text/css" href="https://ssl.gstatic.com/sites/p/8d698a/system/app/themes/ski/standard-css-ski-ltr-ltr.css" />
+<link rel="stylesheet" type="text/css" href="/site/programacionhm/_/rsrc/1470851310000/system/app/css/camelot/allthemes-view.css" />
+<!--[if IE]>
+          <link rel="stylesheet" type="text/css" href="/site/programacionhm/system/app/css/camelot/allthemes%2die.css" />
+        <![endif]-->
+<title>Programación Avanzada con Objetos</title>
+<script type="text/javascript">
+                window.jstiming.load.tick('cl');
+              </script>
+</head>
+<body xmlns="http://www.google.com/ns/jotspot" id="body" class=" en            ">
+<div id="sites-page-toolbar" class="sites-header-divider">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-status" class="sites-status" style="display:none;"><div id="sites-notice" class="sites-notice" role="status" aria-live="assertive"> </div></div>
+</div>
+<div id="sites-chrome-everything-scrollbar">
+<div id="sites-chrome-everything" class="">
+<div id="sites-chrome-page-wrapper" style="direction: ltr">
+<div id="sites-chrome-page-wrapper-inside">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper" style="">
+<table id="sites-chrome-header" class="sites-layout-hbox" cellspacing="0" style="">
+<tr class="sites-header-primary-row" id="sites-chrome-userheader">
+<td id="sites-header-title" class="" role="banner"><div class="sites-header-cell-buffer-wrapper"><h2><a href="https://sites.google.com/site/programacionhm/" dir="ltr" id="sites-chrome-userheader-title">Programación Avanzada con Objetos</a></h2></div></td><td class="sites-layout-searchbox  "><div class="sites-header-cell-buffer-wrapper"><form id="sites-searchbox-form" action="/site/programacionhm/system/app/pages/search" role="search"><input type="hidden" id="sites-searchbox-scope" name="scope" value="search-site" /><input type="text" id="jot-ui-searchInput" name="q" size="20" value="" aria-label="Search this site" /><div id="sites-searchbox-button-set" class="goog-inline-block"><div role="button" id="sites-searchbox-search-button" class="goog-inline-block jfk-button jfk-button-standard" tabindex="0">Search this site</div></div></form></div></td>
+</tr>
+<tr class="sites-header-secondary-row" id="sites-chrome-horizontal-nav">
+<td colspan="2" id="sites-chrome-header-horizontal-nav-container" role="navigation">
+</td>
+</tr>
+</table>
+</div>
+<div id="sites-chrome-main-wrapper">
+<div id="sites-chrome-main-wrapper-inside">
+<table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0" cellpadding="{scmCellpadding}" border="0">
+<tr>
+<td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left initial" style="width:150px">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_2bd" class="sites-embed" role="navigation"><div class="sites-embed-content sites-sidebar-nav"><ul role="navigation" jotId="navList" class="has-expander"><li class="topLevel nav-first "><div class="current-bg" jotId="wuid:gx:9a8647fbd435f28" dir="ltr" style="padding-left: 19px;">Home</div></li><li class="topLevel parent " wuid="gx:7d16a9623388c21f"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="/site/programacionhm/conceptos" jotId="wuid:gx:7d16a9623388c21f" class="sites-navigation-link topLevel">Conceptos</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/conceptos/tipos-binding" jotId="wuid:gx:47bf7abb7c70b312" class="sites-navigation-link">Tipos y Binding</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/conceptos/mixins" jotId="wuid:gx:7c5542d015d28a51" class="sites-navigation-link">Mixins</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="https://sites.google.com/site/programacionhm/conceptos/metaprogramacion" class="sites-navigation-link">Metaprogramación</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="https://sites.google.com/site/programacionhm/conceptos/metamodelos" class="sites-navigation-link">Metamodelos</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="https://sites.google.com/site/programacionhm/conceptos/dsls" class="sites-navigation-link">DSLs</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/conceptos/aop" jotId="wuid:gx:5d7399d0fe75b174" class="sites-navigation-link">Programación Orientada a Aspectos</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="https://sites.google.com/site/programacionhm/conceptos/declaratividad" class="sites-navigation-link">Declaratividad</a></div></li></ul></li><li class="topLevel parent " wuid="gx:bb2d207ff22f167"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="/site/programacionhm/material" jotId="wuid:gx:bb2d207ff22f167" class="sites-navigation-link topLevel">Material</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/te" jotId="wuid:gx:51c310eb0e905d2a" class="sites-navigation-link">Tecnologías</a></div></li></ul></li><li class="topLevel parent " wuid="gx:17c99f2a90151647"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="/site/programacionhm/unsam" jotId="wuid:gx:17c99f2a90151647" class="sites-navigation-link topLevel">Mi Cursada (PHM - UNSAM)</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/temario" jotId="wuid:gx:26da60a825ec7957" class="sites-navigation-link">Temario</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/unsam/planificacion" jotId="wuid:gx:4f873aa626e26d85" class="sites-navigation-link">Planificación</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/tps/2014-c1" jotId="wuid:gx:60d293fd284abef" class="sites-navigation-link">Trabajos Prácticos</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/unsam/notas" jotId="wuid:gx:13a8cccf17c13779" class="sites-navigation-link">Notas</a></div></li></ul></li><li class="topLevel parent " wuid="gx:403a21c1bc0080b4"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="/site/programacionhm/unq" jotId="wuid:gx:403a21c1bc0080b4" class="sites-navigation-link topLevel">Mi Cursada (O3 - UNQ)</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/temario" jotId="wuid:gx:26da60a825ec7957" class="sites-navigation-link">Temario</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/unq/planificacion" jotId="wuid:gx:7ea1a7a43eed66aa" class="sites-navigation-link">Planificación</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/tps/2014-c1" jotId="wuid:gx:60d293fd284abef" class="sites-navigation-link">Trabajos Prácticos</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/unq/notas-unq" jotId="wuid:gx:2fc9ba60e5dbfd8b" class="sites-navigation-link">Notas</a></div></li></ul></li><li class="topLevel parent " wuid="gx:479b7512f4f2c74a"><div dir="ltr" style="padding-left: 0px;"><div class="expander"></div><a href="/site/programacionhm/utn" jotId="wuid:gx:479b7512f4f2c74a" class="sites-navigation-link topLevel">Mi Cursada (TADP - UTN)</a></div><ul role="navigation" class="has-expander"><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/utn/contenidos" jotId="wuid:gx:279312f7a7d3813b" class="sites-navigation-link">Contenidos</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/utn/ejemplos-de-clase" jotId="wuid:gx:1037e378a6717afe" class="sites-navigation-link">Ejemplos de Clase</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/utn/trabajos-practicos" jotId="wuid:gx:2ffcc14dfc7a4f85" class="sites-navigation-link">Trabajos Prácticos</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/utn/planificacion" jotId="wuid:gx:1479833780ce7452" class="sites-navigation-link">Planificación - TADP</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/utn/grupos-y-notas" jotId="wuid:gx:66c22b7bb66d3a5c" class="sites-navigation-link">Grupos y Notas</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/utn/ejercicios-y-evaluaciones" jotId="wuid:gx:794f0bf6c929b8c5" class="sites-navigation-link">Ejercicios y Evaluaciones</a></div></li><li class=""><div dir="ltr" style="padding-left: 38px;"><a href="/site/programacionhm/utn/docentes" jotId="wuid:gx:7e2eea4ec9a4a5af" class="sites-navigation-link">Docentes</a></div></li></ul></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="/site/programacionhm/quienes-somos" jotId="wuid:gx:5ce08a70d9385eec" class="sites-navigation-link topLevel">Quienes Somos</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="/site/programacionhm/unq/obj3-tps-2015c1" jotId="wuid:gx:7dbecc2352a4c740" class="sites-navigation-link topLevel">TPs 1er cuatrimestre 2015</a></div></li><li class="topLevel "><div dir="ltr" style="padding-left: 19px;"><a href="/site/programacionhm/system/app/pages/sitemap/hierarchy" jotId="wuid:gx:1e1d433eac94f67f" class="sites-navigation-link topLevel">Sitemap</a></div></li></ul></div></div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_8935360701636192" class="sites-embed" role="complementary"><h4 class="sites-embed-title">Recent site activity</h4><div class="sites-embed-content sites-sidebar-recent-activity"><ul><li><a jotid="wuid:gx:403a21c1bc0080b4" dir="ltr" href="https://sites.google.com/site/programacionhm/unq">Mi Cursada (O3 - UNQ)</a><div><span class="sites-text-secondary">edited by Javier Fernandes</span></div></li><li><a jotid="wuid:gx:3eddd853bbde4bd5" dir="ltr" href="https://sites.google.com/site/programacionhm/te/scala">Scala</a><div><span class="sites-text-secondary">edited by Javier Fernandes</span></div></li><li><a jotid="wuid:gx:403a21c1bc0080b4" dir="ltr" href="https://sites.google.com/site/programacionhm/unq">Mi Cursada (O3 - UNQ)</a><div><span class="sites-text-secondary">edited by Javier Fernandes</span></div></li><li><a jotid="wuid:gx:51c310eb0e905d2a" dir="ltr" href="https://sites.google.com/site/programacionhm/te">Tecnologías</a><div><span class="sites-text-secondary">edited by Javier Fernandes</span></div></li><li><a jotid="wuid:gx:60d293fd284abef" dir="ltr" href="https://sites.google.com/site/programacionhm/tps/2014-c1">Trabajos Prácticos</a><div><span class="sites-text-secondary">edited by Javier Fernandes</span></div></li><li class="sites-sidebar-recent-activity-viewall"><a href="/site/programacionhm/system/app/pages/recentChanges">View All</a></li></ul></div></div>
+</td>
+<td id="sites-canvas-wrapper">
+<div id="sites-canvas" role="main">
+<div id="goog-ws-editor-toolbar-container"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="title-crumbs" style="">
+</div>
+<h3 xmlns="http://www.w3.org/1999/xhtml" id="sites-page-title-header" style="" align="left">
+<span id="sites-page-title" dir="ltr" tabindex="-1" style="outline: none">Home</span>
+</h3>
+<div id="sites-canvas-main" class="sites-canvas-main">
+<div id="sites-canvas-main-content">
+<table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr"><div>Este sitio contiene material de referencia y contenidos dictados en las siguientes materias:<br /><ul><li><b>Programación con Herramientas Modernas</b> (PHM): de la <b>Universidad Nacional de San Martín</b>.</li><li><b>Programación con Objetos III:</b> de la <b>Universidad Nacional de Quilmes.</b><br /></li><li><b>Técnicas Avanzadas de Programación </b>(TADP) de la <b>Universidad Tecnológica Nacional - FRBA</b></li></ul><div>Muchos de quienes elaboramos este sitio y enseñamos en esas materias participamos y colaboramos en el grupo <a href="http://www.uqbar-project.org/" target="_blank" rel="nofollow">Uqbar</a> (de ahí el nombre de dominio del sitio).</div><br /><u><b>Nota: </b></u><br />Este sitio está en construccion, sepan disculpar las molestias y no duden en avisar si encuentran algo que falta o que está roto así vamos mejorando. <br /><h4><a name="TOC-Informaci-n-sobre-la-cursada"></a>Información sobre la cursada</h4>En la sección <a href="https://sites.google.com/site/programacionhm/unsam">Mi Cursada</a> van a encontrar un miniblog conteniendo el seguimiento Clase a clase. También pueden encontrar la <a href="https://sites.google.com/site/programacionhm/unsam/planificacion">Planificación</a> de la materia (siempre recordando que es una <b>planificación tentativa</b> y que puede haber muchas cuestiones externas a nosotros que la pueden hacer cambiar)<br /><br />Pronto agregaremos la información del status de la cursada de cada uno.<br /><h4><a name="TOC-Material-te-rico-y-pr-ctico"></a>Material  teórico y práctico<br /></h4>La fuente principal de información y de material de lectura está en <a href="https://sites.google.com/site/programacionhm/temario">Temario</a>, en la que encontrarán todo el material teórico de la materia, ordenado por unidades que aproximadamente siguen el mismo orden que las clases, así que ese es el primer lugar donde ir a mirar. <br /></div><div><br />Además de eso tenemos dos categorías de material ortogonales entre sí: <a href="https://sites.google.com/site/programacionhm/conceptos">Conceptos</a> y <a href="https://sites.google.com/site/programacionhm/te">Tecnologías</a>. Los conceptos son las ideas principales que queremos aprender, las tecnologías son las formas que tenemos de llevar eso a la práctica.<br /><br /></div></div></td></tr></tbody></table>
+</div> 
+</div> 
+<div id="sites-canvas-bottom-panel">
+<div xmlns="http://www.w3.org/1999/xhtml" id="COMP_page-subpages"> </div>
+<div id="sites-attachments-container">
+</div>
+</div>
+</div> 
+</td> 
+</tr>
+</table> 
+</div> 
+</div> 
+<div id="sites-chrome-footer-wrapper">
+<div id="sites-chrome-footer-wrapper-inside">
+<div id="sites-chrome-footer">
+</div>
+</div>
+</div>
+</div> 
+</div> 
+<div id="sites-chrome-adminfooter-container">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sites-adminfooter" role="navigation"><p><a class="sites-system-link" href="https://www.google.com/a/UniversalLogin?service=jotspot&amp;continue=https://sites.google.com/site/programacionhm/home">Iniciar sesión</a><span aria-hidden="true">|</span><a class="sites-system-link" href="/site/programacionhm/system/app/pages/recentChanges">Actividad reciente del sitio</a><span aria-hidden="true">|</span><a class="sites-system-link" href="/site/programacionhm/system/app/pages/reportAbuse" target="_blank">Informar de uso inadecuado</a><span aria-hidden="true">|</span><a class="sites-system-link" href="javascript:;" onclick="window.open(webspace.printUrl)">Imprimir página</a><span aria-hidden="true">|</span><span class="sites-system-link">Con la tecnología de</span> <b class="powered-by"><a href="http://sites.google.com">Google Sites</a></b></p></div>
+</div>
+</div> 
+</div> 
+<div id="sites-chrome-onebar-footer">
+</div>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('sjl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="https://ssl.gstatic.com/sites/p/8d698a/system/js/jot_min_view__en.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('jl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+      
+          sites.core.Analytics.createTracker();
+          sites.core.Analytics.trackPageview();
+        
+    </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+                    sites.Searchbox.initialize(
+                        'sites-searchbox-search-button',
+                        {"object":[]}['object'],
+                        'search-site',
+                        {"label":"Configure search options...","url":"/site/programacionhm/system/app/pages/admin/settings"});
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+      gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
+    </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+            JOT_setupNav("2bd", "Navigation", false);
+            JOT_addListener('titleChange', 'JOT_NAVIGATION_titleChange', 'COMP_2bd');
+          </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+          JOT_addListener('titleChange', 'JOT_RECENTCHANGES_titleChange', 'COMP_8935360701636192');
+        </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+  setTimeout(function() {
+    var fingerprint = gsites.date.TimeZone.getFingerprint([1109635200000, 1128902400000, 1130657000000, 1143333000000, 1143806400000, 1145000000000, 1146380000000, 1152489600000, 1159800000000, 1159500000000, 1162095000000, 1162075000000, 1162105500000]);
+    gsites.Xhr.send('https://sites.google.com/site/programacionhm/_/tz', null, null, 'GET', null, null, { afjstz: fingerprint });
+  }, 500);
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+                    window.onload = function() {
+                      if (false) {
+                        JOT_setMobilePreview();
+                      }
+                      var loadTimer = window.jstiming.load;
+                      loadTimer.tick("ol");
+                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
+                      window.jstiming.report(loadTimer, {}, 'https://gg.google.com/csi');
+                    }
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+        JOT_insertAnalyticsCode(false,
+            false);
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
+        webspace, "en");
+    maestroRunner.initListeners();
+    maestroRunner.installEditRender();
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+        JOT_insertTranslateCode('es', 'en');
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+  //<![CDATA[
+    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
+    if (webspace.user.hasWriteAccess) {
+      JOT_decorateButtons();
+    }
+
+    // Fires delayed events.
+    (function() {
+      JOT_fullyLoaded = true;
+      var delayedEvents = JOT_delayedEvents;
+      for (var x = 0; x < delayedEvents.length; x++) {
+        var event = delayedEvents[x];
+        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
+      }
+      JOT_delayedEvents = null;
+      JOT_postEvent('pageLoaded');
+    })();
+  //]]>
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    JOT_postEvent('decorateGvizCharts');
+  </script>
+<script type="text/javascript">
+          JOT_setupPostRenderingManager();
+        </script>
+<script type="text/javascript">
+          JOT_postEvent('renderPlus', null, 'sites-chrome-main');
+        </script>
+<div id="server-timer-div" style="display:none"> </div>
+<script type="text/javascript">
+          window.jstiming.load.tick('render');
+          JOT_postEvent('usercontentrendered', this);
+        </script>
+</body>
+</html>

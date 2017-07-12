@@ -1,0 +1,10 @@
+ Ninguno de los dos programas tienen efecto sobre los tableros:
+-En el primer programa se pone una bolita y luego se saca, por lo que
+no hay ningun efecto sobre el resutado final de las tablas.
+-En el segundo caso, se ejecuta un programa con un nuevo comando(//)
+que al parecer no tiene efectos finales visibles sobre las tablas.
+
+¿Se le ocurre algun tablero en el que podrian
+diferir los efectos finales?
+No hay tablero en el que puedan diferir los resultados, se repitiría lo
+mismo en cada caso

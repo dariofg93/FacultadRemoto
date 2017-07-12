@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1446326553 source:e:\facultad\estructuras de datos\soluciones\cpp y h(c,c++)\fraccion\fraccion.cpp
+	<iostream>
+	"Fraccion.h"
+
+1446326379 e:\facultad\estructuras de datos\soluciones\cpp y h(c,c++)\fraccion\fraccion.h
+	<iostream>
+
+1446326410 source:e:\facultad\estructuras de datos\soluciones\cpp y h(c,c++)\fraccion\main.cpp
+	<iostream>
+	"Fraccion.h"
+
+1446483189 source:e:\facultad\estructuras de datos\soluciones\cpp y h(c,c++)\ejercicio_2(fraccion)\fraccion.cpp
+	"Fraccion.h"
+
+1446467004 e:\facultad\estructuras de datos\soluciones\cpp y h(c,c++)\ejercicio_2(fraccion)\fraccion.h
+	<iostream>
+
+1446482533 source:e:\facultad\estructuras de datos\soluciones\cpp y h(c,c++)\ejercicio_2(fraccion)\main.cpp
+	<iostream>
+	"Fraccion.h"
+

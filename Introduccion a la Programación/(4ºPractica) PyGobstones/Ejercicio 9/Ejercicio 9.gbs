@@ -1,0 +1,143 @@
+procedure PonerN(n,c)
+{
+ repeatWith i in 1..n
+ { Poner(c) }
+}
+
+function colorPieza()
+{
+ return(Rojo)
+}
+
+function numeroPiso()
+{
+ return(1)
+}
+
+function numeroSeccion()
+{
+ return(nroBolitas(colorPieza()))
+}
+
+function estaFlotando()
+{
+ return(numeroSeccion()>1)
+}
+
+function aUXhaySeccionAl(d)--AUXILIAR
+{
+ Mover(d)
+ return(hayBolitas(colorPieza()))
+}
+
+function haySeccionAl(d)
+{
+ return(puedeMover(d)&&aUXhaySeccionAl(d))
+}
+
+function numeroSeccionAl(d)
+{
+ if((puedeMover(d)))
+ { Mover(d) }
+ return(nroBolitas(colorPieza()))
+}
+
+function continuaPiezaHacia(d)
+{
+ return(numeroSeccion()==numeroSeccionAl(d))
+}
+
+function centradoEnPieza(d)
+{
+ return(continuaPiezaHacia(d)&&continuaPiezaHacia(-d))
+}
+
+procedure CentrarEnPieza()
+{
+ seccion:=numeroSeccion()
+ sonIguales:=continuaPiezaHacia(Norte)==seccion
+ if(not sonIguales)
+ {
+  sonIguales:=continuaPiezaHacia(d)==seccion
+  Mover(Norte)
+ }
+ else
+ {
+  sonIguales:=continuaPiezaHacia(d)==seccion
+  Mover(Este)
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+procedure Main()
+{
+ CentrarEnPieza()
+}
+

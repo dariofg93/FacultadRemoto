@@ -1,0 +1,41 @@
+procedure ProgramaDeTresComandos() {
+//Propósito:Dejar una bolita Azul lindante al Este, dejando el cabezal en
+//la celda inicial.
+//Precondición:Debe haber al menos una celda al Este de la celda inicial.
+ Mover(Este)
+ Poner(Azul)
+ Mover(Oeste)
+}
+
+procedure ProgramaDeCincoComandos() {
+//Propósito:Dejar una bolita Azul lindante al Este, dejando el cabezal en
+//la celda inicial.
+//Precondición:Debe haber al menos una celda al Este de la celda inicial.
+ Mover(Este)
+ Poner(Verde)
+ Sacar(Verde)
+ Poner(Azul)
+ Mover(Oeste)
+}
+
+procedure ProgramaDeSieteComandos() {
+//Propósito:Dejar una bolita Azul lindante al Este, dejando el cabezal en
+//la celda inicial.
+//Precondición:Debe haber al menos una celda al Este de la celda inicial.
+ Mover(Este)
+ Mover(Oeste)
+ Mover(Este)
+ Poner(Azul)
+ Mover(Oeste)
+ Mover(Este)
+ Mover(Oeste)
+}
+
+/*Los 3 programas hacen lo mismo pero con diferentes cantidades de comandos
+si se habla del efecto final del tablero; por lo tanto, no se puede saber     cual fue el programa utilizado viendo unicamente el tablero*/
+
+procedure Main()
+{
+ IrAlOrigen()
+ 
+}
