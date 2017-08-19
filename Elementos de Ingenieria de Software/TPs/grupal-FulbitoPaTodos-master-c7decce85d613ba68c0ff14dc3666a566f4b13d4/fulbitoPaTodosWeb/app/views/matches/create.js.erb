@@ -1,0 +1,7 @@
+<% if @match.errors.blank? %>
+  $('#match-modal').modal('hide');
+  $('table tbody').append('<%= j render "match_row", match: @match %>');
+<% else %>
+  // TODO: show the errors in the UI
+  alert('Algo falló');
+<% end %>

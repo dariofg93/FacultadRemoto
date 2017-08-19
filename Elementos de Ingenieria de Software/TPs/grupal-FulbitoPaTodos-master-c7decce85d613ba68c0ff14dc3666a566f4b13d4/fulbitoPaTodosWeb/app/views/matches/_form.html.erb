@@ -1,0 +1,23 @@
+<div id="match-modal" class="modal fade">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content modal-sm">
+      <div id="headModal">
+        Unirse Al Partido?
+      </div>
+      <%= form_for @match do |f| %>
+      <div class="modal-body modal-sm">
+        Lugar:<%= @match.place %><br />
+        Fecha:<%= @match.date %><br />
+        Horario:<%= @match.time %><br />
+        <%= f.hidden_field :id, value: @match.id %>
+      </div>
+      <div class="modal-footer modal-sm">
+        <%= f.submit "OK" ,:class => 'btn btn-primary'%>
+        <button type= "button" class="btn btn-primary" data-dismiss="modal">
+          Cancelar
+        </button>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

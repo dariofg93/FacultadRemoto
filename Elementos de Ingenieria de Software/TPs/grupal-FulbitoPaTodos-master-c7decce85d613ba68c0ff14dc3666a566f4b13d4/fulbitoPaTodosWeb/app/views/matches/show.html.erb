@@ -1,0 +1,9 @@
+<div id="imagen1">
+<%= form_for(@match) do |f| %>
+    Lugar:<%= @match.place %><br />
+    Fecha:<%= @match.date %><br />
+    Horario:<%= @match.time %><br />
+    <%= f.hidden_field :id, value: @match.id %>
+    <%= f.submit "OK" ,:class => 'btn btn-primary'%>
+<% end %>
+</div>

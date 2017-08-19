@@ -1,0 +1,36 @@
+<div id="match-modal" class="modal fade">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content modal-sm">
+      <div id="headModal">
+        Crear Partido
+      </div>
+      <%= form_for(@match) do |f| %>
+      <div class="modal-body modal-sm">
+        <p>
+            <%= f.label :place %><br />
+            <%= f.text_field :place %>
+        </p>
+        <p>
+            <%= f.label :date %><br />
+            <%= f.text_field :date %>
+        </p>
+        <p>
+            <%= f.label :time %><br />
+            <%= f.text_field :time %>
+        </p>
+        <div class="checkbox">
+          <label><!--<input type="checkbox">Exclusivo? </input>-->
+              <%=check_box_tag 'exclusive' 'Exclusivo?'%>Exclusivo?
+          </label>
+        </div>
+      </div>
+      <div class="modal-footer modal-sm">
+        <%= f.submit "OK" ,:class => 'btn btn-primary' %>
+        <button type= "button" class="btn btn-primary" data-dismiss="modal">
+          Cancelar
+        </button>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  place: MyString
+  time: MyString
+  date: 2016-12-03
+  exclusive: false
+
+two:
+  place: MyString
+  time: MyString
+  date: 2016-12-03
+  exclusive: false
