@@ -1,0 +1,19 @@
+Python: python.org
+Repo Gitlab: https://gitlab.com/sistemasoperativosunq/curso2017s2/
+Bibliografias: Sistemas OperativosTenembaum, Fundamentos blabla Silverchast
+pip en consola: sudo apt-get install python-pip
+
+so = Software que interactua entre el usuario y los recursos(administrandolos) del pc, haciendo invisible todos los procesos que se ejecutan a nivel hardware.
+* Provee multitareas a gran velocidad.
+* Segun el hardware necesita un so diferente, ya que el objetivo es diferente.
+
+Conceptos: 
+proceso batch = un programa que se ejecuta despues de otro.
+multiprogramacion = la cpu siempre esta trabajando
+time sharing = la accion de que cuando el programa de un cpu esta en estado de entrada/salida, se ejecute otro programa, segun el que tenga mayor prioridad.
+reloj = Es el "motor","corazon" del cpu, el cual determina la cantidad de procesoss que se ejecutan en un determinado tiempo, o cuales procesos, etc.
+
+modo Kernel = Poder realizar todas las instrucciones posibles sin la interrupcion por parte del sistema operativo.
+modo Usuario = No es posible realizar todas las instrucciones 
+
+Nos basamos en el modelo de Vonn Neuman(cpu y memoria) para correr los programas (so entre ellos)

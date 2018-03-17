@@ -1,0 +1,19 @@
+Proceso: Instancia/ejecucuion de un programa, un proceso no es un programa.
+Vimos:
+
+	Estados de procesos/Ciclo de vida: Los procesos se van alternando para hacer que se puedan ejecutar multitareas.
+		Running: El cpu esta leyendo instrucciones del proceso
+		Waiting: Aunque tenga cpu no se puede ejecutar porque algun dispositivo esta ejecutando sus(del proceso) instrucciones de I/O
+		Ready: El proceso esta listo para correr, pero el planificador aun no asigno cpu para ejecutarse.
+		Terminated: Cuando termino de ejecutar todas las instrucciones, libera memoria y se borra el PCB
+		new: El proceso aun no existe como tal, pero esta "asignandose" todos los recursos necesarios para funcionar
+	Estructura de procesos: Se refiere a todas las cosas que necesita el so para poder ejecutar un proceso.
+		Tabla de procesos: Es como un diccionario en el que asocia un proceso con su id junto a su Estructura de proceso(PCB)
+			Estado del proceso,
+			Estado de los registros,
+			Estado del Stack,
+			Estado de archivos,
+			Direccion base, instruccion a ejecutar del proceso.
+	Planificacion: Se refiere a como decide el so a quien se le asigna el tiempo de cpu.
+
+Hacer un informe sobre la historia de los sistemas operativos (3 carillas).

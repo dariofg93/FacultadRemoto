@@ -1,0 +1,39 @@
+Leer el de Tenembaum(Modern Operating - 4 Edición)
+
+* Scheduler / Planificacion:
+
+* Dispatcher: Es el complemento del Context Switch y es quien guarda los datos del proceso que se vienen ejecutando, tambien los sube a la ejecucion del cpu.
+
+* Threads: Para el so es mucho mas liviano levantar un thread que un nuevo proceso.
+	- Usuario: Son los levantados sin la necesidad de hacerle una peticion al so, son independientes.
+	- Kernel: Son los que estan gestionados del so, por lo tanto, son mas pesados para el so.
+
+* Context Switch: Es lo que hace que la cpu cambie de procesos(guardando sus estados), dejando la ilusion de que varios
+					procesos se ejecutan al mismo tiempo.
+
+* Tiempo de rafaga: El tiempo que tarda un proceso en ser ejecutado por el cpu.
+
+* Criterios:  
+	- FCFS(First Count First Search): Se ejecutan los procesos secuencialmente segun como llegan.
+	- SJF(Shortest Just First ): Reduce el tiempo de espera promedio de los procesos, que requieren tiempo de cpu
+	- Round Robin: Repartir la cpu en tiempos de procesos equitativos para cada uno de los procesos que se estan ejecutando(quantum).
+	- Prioridad: Algunos procesos son mas importantes que otros, entonces se le da tiempo de ejecucion a esos procesos.
+				  Su riesgo es que es posible que un proceso con baja prioridad no se ejecute nunca (innanicion). Para solucionarlo
+				  se le suma prioridad al proceso para que eventualmente éste tenga tiempo de cpu (por envejecimiento).
+
+* Expropiativo / No expropiativo: Si es Expropiativo no se espera a que los procesos actuales terminen para darle 
+										tiempo de ejecucion a otro proceso con mayor prioridad(Si es con criterio de Prioridad).
+									    En un so NO Expropiativo no sucede lo anterior.
+
+
+Cosas que hay que agregar al so:
+
+Eschedule: 
+PCB Table: Donde esta el pc, como estan los registros, en que parte de la memoria esta el proceso.
+InterruptVector: Es un vector que contiene todas las interrupciones y la direccion de memoria que ejecuta las instrucciones de dicha interrupcion.
+I/O Device:
+	- Queue
+Dispatcher:
+
+
+import cpu   ----> cpu = cpu.Cpu()

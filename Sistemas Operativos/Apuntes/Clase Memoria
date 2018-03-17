@@ -1,0 +1,25 @@
+Asignacion continua: Cada proceso se carga completo en memoria a partir del final del ultimo proceso cargado.
+Problemas:
+		Se generan espacios vacios por entre medio de la memoria, "Despierdicio de memoria"
+		Los procesos se pueden pisar en memoria.
+
+Seguridad en memoria:
+		Verificar en el mmu que la direccion fisica cargada este dentro del limite del pcb...
+
+Si hay 2 porciones de memorias separados lo mejor es compactarlos, "corriendo" todos los bloques de procesos hacia "arriba"
+
+Politicas de reasignacion de memoria:
+	Find First: Pone el proceso en el primero que encuentra de los bloques de memoria vacios 
+	Best Fit: Recorro todos y me fijo cual entra mas justo segun lo que se necesita
+	Worst Fit: Contrario a Best Fit
+
+Paginacion: Los bloques son dispares en asignacion continua, en paginacin se parte la memoria en varios bloques, y cuando se carga un proceso 
+se pone en uno o mas bloques de la memoria 
+
+- Bloque de 10 a 20 y 30 a 40 ---> se llena de 21 a 29 ---> un bloque de 10 a 40
+- Defragmentacion...
+- 
+
+	* FreBlock
+	* Compactacion
+	* free(numero que diga cuanto espacio libre hay en total)
