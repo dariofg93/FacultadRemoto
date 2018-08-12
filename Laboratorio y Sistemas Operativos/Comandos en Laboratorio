@@ -1,0 +1,19 @@
+En consola:
+* df -h 					=> Para ver las particiones del disco en mi pc
+* dmesg						=> Para ver la salida del Kernel(desde que bootea hasta el momento en que se ejecuta el programa en consola)
+* lspci						=> Especificaciones de Hardware, no es muy especifico
+* lsusb						=> Para ver puertos disponible y que tienen conectado
+* cat /proc/cpuinfo			=> Especifiaciones muy buenas del microprocesador
+* cat /proc/meminfo			=> Especifiaciones muy buenas de la memoria
+* eject 					=> Para abrir la bandeja del disco
+* uptime					=> Muestra la hora, desde cuando esta prendida y los usuarios que la usarion
+* uname -a 					=> El kernel que se esta ejecutando
+* ps 						=> Los procesos ejecutandose (pcb)
+* top 						=> Procesos ejecutandose en tiempo real con especificaciones
+* mkdir {nombreCarpeta}		=> Para crear carpetas
+* touch {nombreArchivo}		=> Para crear un archivo     ---> para ver si se creo el archivo se puede usar ls
+* -R 						=> El programa ejecutado es recursivo... como un ls o un chmod...
+* | more 					=> 'Si queres ver mas apreta Enter'
+* > 						=> redirecciona la salida de un programa a un archivo
+* echo {unaCadenaDeChars} 	=> Muestra en consola una cadena de caracteres
+* man {nombrePrograma}		=> Para ver diferentes opciones que se pueda hacer con el programa

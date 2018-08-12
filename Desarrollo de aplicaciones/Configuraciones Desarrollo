@@ -1,0 +1,52 @@
+* USer Heroku :  Dariofg93
+* Contraseña Heroku : D@riofg93
+
+* Email de la aplicacion{
+	Cuenta: carpnd2018
+	Contraseña: grupob2018
+}
+
+* Correr servidores para pruebas locales{
+	Para correr en jetty:
+		mvn org.mortbay.jetty:jetty-maven-plugin:run
+
+	Para correr angular:
+		ng server
+}
+
+* Desde carpeta raiz del proyecto{
+	Para actualizar el backend en heroku:
+		heroku git:remote -a backend-carpnd
+		git subtree push --prefix desapp-groupB-backend/ heroku master
+
+	Para actualizar el frontend en heroku:
+		heroku git:remote -a frontend-carpnd
+		git subtree push --prefix carpndWeb/ heroku master
+}
+
+* En local las urls{
+	Backend:
+		http://localhost:8080/vehicles/1
+
+	Frontend:
+		http://localhost:4200
+}
+
+* Para que aparesca la carpeta de dependencias de maven:
+	mvn install dependency:copy-dependencies
+
+* Para tp de angular:
+	abrir consola en carpeta raiz de proyecto de angular y tirar npm install
+	esperar, esperar y seguir esperando hasta que termine...
+
+* Para arreglar refresh de angular:
+	sudo sysctl fs.inotify.max_user_watches=524288
+	sudo sysctl -p --system
+
+* Tamaño Logo: 50x34
+
+* instalar plugin de CORS en el navegador
+
+* Para generar archivo con traducciones en ingles: ng xi18n -of app/locale/en-US.xlf -f xlf --locale en
+
+* URL De pruebas Auth0: https://carpnd-b.auth0.com/login?client=JZ5acUq2z40GWlsUFckSq8QL9U1UUfpl

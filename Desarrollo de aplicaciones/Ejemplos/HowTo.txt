@@ -1,0 +1,37 @@
+==== Levantar Jetty desde consola ===
+mvn org.mortbay.jetty:jetty-maven-plugin:run  
+
+
+
+=== Deploy a Angular en la nube (OPCION 1 utilizando netlify) ===
+https://www.netlify.com/blog/2015/11/10/a-step-by-step-guide-hosting-angular-apps-on-netlify/
+
+=== Deploy a Angular en la nube (OPCION 2 usando HEROKU) ===
+Buenas comparto nuestra forma de deployar el front y el back 
+en heroku desde un mismo repo github:
+
+nuestro repo es https://github.com/juanpablocamejo/unq-desapp
+
+en el repo tenemos una carpeta de frontend y otra de backend
+
+en heroku tenemos 2 aplicaciones
+la del backend se deploya a traves de travis. ver .travis.yml
+la del front tiene activado el deploy automatico,
+y el siguiente buildpack: https://github.com/heroku/heroku-buildpack-static
+que incluye un archivo de configuración llamado static.json
+
+el static.json y el travis.yml van el el root del repo,
+y el procfile en la carpeta del backend. (ADJUNTO: EjemploDeployHeroku.rar)
+
+adjunto los 3 archivos.
+
+el buildpack para contenido estatico también permite configurar
+un proxy para poder acceder a la app backend desde una url
+de la app frontend. (ver static.json)
+
+detalle: nosotros incluimos en el repositorio la carpeta dist
+del proyecto frontend que les puede aparecer configurada en el gitignore.
+y es importante correr el grunt build antes de comitear contenido del front.
+
+Saludos!
+==================================================================
